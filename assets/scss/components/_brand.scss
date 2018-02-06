@@ -1,0 +1,20 @@
+
+.header__brand {
+	display: flex;
+	align-items: center;
+}
+
+.brand__logo {
+	width: 60px;
+	height: auto;
+	padding-right: $size-sm;
+}
+
+.brand__text {
+	font-size: $size-sm-md;
+	flex-shrink: 0;
+	> a {
+		color: $c-text-light;
+		text-decoration: none;
+	}
+}

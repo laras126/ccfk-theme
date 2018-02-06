@@ -7,26 +7,26 @@
 {% endblock %}
 
 	<body class="{{body_class}}" data-template="base.twig">
-		<header class="header" >
-			{% block header %}
-				<div class="wrapper">
-					<h1 class="hdr-logo" role="banner">
-						<a class="hdr-logo-link" href="{{site.url}}" rel="home">{{site.name}}</a>
-					</h1>
-					<nav id="nav-main" class="nav-main" role="navigation">
-						{% include "menu.twig" with {'menu': menu.get_items} %}
-					</nav><!-- #nav -->
-				</div>
-			{% endblock %}
+
+		<header class="site__header">
+			<div class="header__brand">
+				<img class="brand__logo" src="{{site.theme.link}}/assets/svg/logo.svg" alt="Logo: Red and black race car">
+				<span class="brand__text" role="banner">
+					<a href="{{site.url}}" rel="home">{{site.name}}</a>
+				</span>
+			</div>
+			<nav class="header__nav" role="navigation">
+				{% include "menu.twig" with {'menu': menu.get_items} %}
+			</nav>
 		</header>
 
-		<section id="content" role="main" class="content-wrapper">
+		<section class="site__content" role="main">
 			{% if title %}<h1>{{title}}</h1>{% endif %}
-			<div class="wrapper {{sidebar_class}}">
+			<!-- <div class="inner {{sidebar_class}}"> -->
 				{% block content %}
 					Sorry, no content
 				{% endblock %}
-			</div>
+			<!-- </div> -->
 			{% if sidebar %}
 				<aside class="layout-sidebar">
 					{{sidebar}}
@@ -35,7 +35,7 @@
 		</section>
 
 		{% block footer %}
-			<footer id="footer">
+			<footer class="site__footer">
 				{% include 'footer.twig' %}
 			</footer>
 			{{ function('wp_footer') }}

@@ -1,0 +1,35 @@
+
+
+table {
+	margin-bottom: $size-sm;
+	font-size: $size-sm;
+}
+
+tr {
+	border-bottom: $border-reg;
+}
+
+td {
+	padding: $size-sm;
+	border-right: $border-reg;
+
+	&:last-child {
+			border-right: 0;
+	}
+
+	&:first-child {
+			font-weight: 500;
+	}
+}
+
+th {
+	border-bottom: $border-reg;
+	border-right: $border-reg;
+	text-align: left;
+	padding: $size-sm;
+	font-size: $size-sm;
+
+	&:last-child {
+			border-right: 0;
+	}
+}

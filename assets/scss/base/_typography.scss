@@ -1,0 +1,10 @@
+
+body {
+	@include fonts(body);
+	line-height: $line-height-base;
+	font-size: 115%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	@include fonts(heading);
+}
