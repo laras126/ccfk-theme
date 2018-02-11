@@ -63,7 +63,7 @@ $desktop-nav: 'min-width: #{map-get($screens, 'tablet')}';
 }
 
 .nav__list__item {
-	margin-right: $size-sm;
+	margin-right: 2vw;
 }
 
 .nav__link {

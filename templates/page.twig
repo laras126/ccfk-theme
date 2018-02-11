@@ -2,22 +2,21 @@
 
 {% block content %}
 	<article class="page__article">
-		<header class="page__header grid-outer">
+		<header class="page__header {% if post.thumbnail.src %}with-thumbnail {% endif %}grid-outer">
 			<div class="page__header-contents">
 				<h1 class="page__title">{{post.title}}</h1>
-				<p class="page__tagline">{{post.post_excerpt}}</p>
+				{% if post.post_excerpt %}
+					<p class="page__tagline">{{post.post_excerpt}}</p>
+				{% endif %}
 			</div>
-			<img class="page__header-image" src="{{post.thumbnail.src}}" alt="">
+			{% if post.thumbnail %}
+				<img class="page__header-image" src="{{post.thumbnail.src}}" alt="">
+			{% endif %}
 		</header>
-		<section class="grid-outer content">
-			{# <div class="callout alignwide">
-				<img class="callout__image" src="{{post.thumbnail.src}}" alt="">
-				<div class="callout__details">
-					<h4>Heading</h4>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, quas? Consequatur voluptate esse accusantium aliquam. Quisquam consectetur, cupiditate et doloremque quod nulla corporis itaque sit modi omnis! Animi, ea impedit.</p>
-				</div>
-			</div> #}
-			{{post.content}}
+		<section class="grid-outer">
+			<div class="content">
+				{{post.content}}
+			</div>
 		</section>
 	</article>
 {% endblock %}

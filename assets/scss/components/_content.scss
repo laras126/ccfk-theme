@@ -1,7 +1,4 @@
 .content {
-	> * {
-		@include span-4;
-	}
 
 	@media( $tablet-start ) {
 		h2 {
@@ -20,12 +17,18 @@
 
 .wp-block-gallery {
 	@include unstyle-list;
+	margin-left: -8px;
+	margin-right: -8px;
+}
+
+figure {
+	margin-left: 0;
+	margin-right: 0;
 }
 
 .wp-block-image {
 	margin-left: 0;
 	margin-right: 0;
-
 
 	&.alignleft {
 		float: left;

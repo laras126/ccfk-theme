@@ -1,0 +1,22 @@
+
+@media( $tablet-start ) {
+
+	.site__footer .inner {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.footer__first {
+
+	}
+
+	.footer__last {
+
+	}
+}
+
+.footer__copy {
+	margin-top: $size-sm;
+	background: $c-text-med;
+	font-size: $size-sm;
+}

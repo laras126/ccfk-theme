@@ -1,3 +1,27 @@
+// Button
+@mixin button( $button-color, $text-color: $white ) {
+  background-color: $button-color;
+  border-radius: 2px;
+  color: $text-color;
+
+  border: 2px solid lighten($button-color, 10%);
+  padding: $size-sm $size-sm-md;
+  display: inline-block;
+
+	&:hover,
+	&:focus {
+		background-color: darken( $button-color, 10% );
+		color: $text-color;
+    border-color: $button-color;
+	}
+
+	&:active {
+		background-color: darken( $button-color, 30% );
+    border-color: darken( $button-color, 10%);
+	}
+}
+
+
 
 @mixin span-4 {
 	grid-column: 1;

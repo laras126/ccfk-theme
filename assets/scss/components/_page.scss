@@ -38,10 +38,9 @@
 }
 
 .page__title {
-	font-size: $size-md;
+	font-size: $size-lg;
 
 	@media( $phablet-start ) {
-		font-size: $size-lg;
 		margin-bottom: 0;
 	}
 }
