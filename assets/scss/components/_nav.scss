@@ -82,6 +82,7 @@ $desktop-nav: 'min-width: #{map-get($screens, 'tablet')}';
 }
 
 .nav__link {
+	color: $color-white;
 	@media( $desktop-nav ) {
 		color: $color-dark;
 		border-top: 10px solid transparent;

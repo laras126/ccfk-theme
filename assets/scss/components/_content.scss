@@ -50,16 +50,25 @@ figure {
 	}
 }
 
-// .callout {
-// 	display: grid;
-// 	grid-template-columns: repeat(3, 1fr);
-// 	grid-column-gap: 30px;
-// }
+//
+// Gallery
+//
 
-// .callout__image {
-// 	grid-column: 1;
-// }
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+}
 
-// .callout__details {
-// 	grid-column: 2 / 4;
-// }
+.gallery-item img {
+	max-width: 100%;
+	height: auto;
+}
+
+@for $i from 1 through 4 {
+	.gallery-columns-#{$i} {
+		> * {
+			width: calc(100% / #{$i});
+			padding: $size-xs;
+		}
+	}
+}

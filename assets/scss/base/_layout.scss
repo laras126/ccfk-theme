@@ -26,15 +26,14 @@
 }
 
 .content {
+	max-width: map-get($screens, 'tablet');
+	grid-area: content;
+
 	@media( $mobile-only ) {
 		padding-left: 3%;
 		padding-right: 3%;
 	}
-	padding-top: $size-md;
-	max-width: map-get($screens, 'tablet');
-	grid-area: content;
 }
-
 
 .sidebar {
 	@media( $mobile-only ) {

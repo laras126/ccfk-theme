@@ -63,9 +63,10 @@
 	@media( $tablet-start ) {
 		object-fit: cover;
 		display: block;
-		height: 50vh;
+		max-height: 50vh;
 		width: 100%;
 		grid-column: 3 / span 3;
+		border-left: 10px solid $color-grey;
 
 		@supports not ( display: grid ) {
 			width: 50%;
@@ -78,10 +79,18 @@
 }
 
 .page__main {
-	// background-color: $color-grey-vlight;
-	// border-left: 10px solid $color-dark;
+	background-color: $color-grey-vlight;
+	padding-top: 30px;
+	padding-bottom: 30px;
 }
 
 .page__content {
 	background-color: $color-white;
+	padding-top: $size-md;
+	padding-left: 5%;
+	padding-right: 5%;
+
+	@media( $desktop-start ) {
+		// margin-left: -5%;
+	}
 }

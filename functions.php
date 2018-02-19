@@ -39,10 +39,9 @@ class StarterSite extends TimberSite {
 	}
 
 	function add_to_context( $context ) {
-		$context['foo'] = 'bar';
-		$context['stuff'] = 'I am a value set in your functions.php file';
-		$context['notes'] = 'These values are available everytime you call Timber::get_context();';
-		$context['menu'] = new TimberMenu();
+		$context['menu'] = new TimberMenu('Main Menu');
+		$context['footer_links'] = new TimberMenu('Footer Links');
+		$context['sidebar'] = Timber::get_widgets('main_sidebar');
 		$context['site'] = $this;
 		return $context;
 	}
@@ -64,7 +63,6 @@ class StarterSite extends TimberSite {
 new StarterSite();
 
 
-
 function ccfk_scripts() {
 	wp_enqueue_style( 'ccfk-style', get_template_directory_uri() . '/assets/css/main.css' );
 	wp_enqueue_script( 'ccfk-scripts', get_template_directory_uri() . '/assets/js/build/scripts.js' );
@@ -72,3 +70,15 @@ function ccfk_scripts() {
 add_action( 'wp_enqueue_scripts', 'ccfk_scripts' );
 
 
+function ccfk_widgets_init() {
+	register_sidebar( array(
+			'name'          => __( 'Main Sidebar', 'textdomain' ),
+			'id'            => 'main_sidebar',
+			'description'   => __( 'Widgets in this area will be shown on all posts and pages.', 'textdomain' ),
+			'before_widget' => '<li id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</li>',
+			'before_title'  => '<h3 class="widget__title">',
+			'after_title'   => '</h3>',
+	) );
+}
+add_action( 'widgets_init', 'ccfk_widgets_init' );

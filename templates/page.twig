@@ -9,17 +9,20 @@
 					<p class="page__tagline">{{post.post_excerpt}}</p>
 				{% endif %}
 			</div>
-			{% if post.thumbnail %}
+			{% if post.thumbnail and post.show_featured_image_in_header == true %}
 				<img class="page__header-image" src="{{post.thumbnail.src}}" alt="">
 			{% endif %}
 		</header>
 		<section class="page__main grid-outer">
 			<div class="page__content content">
+				{{dump(post.show_featured_image_in_header)}}
 				{{post.content}}
 			</div>
-			<div class="sidebar">
-				<p>Hey, there could be some fun stuff here!</p>
-			</div>
+			<aside class="sidebar">
+				<ul class="widgets">
+					{{sidebar}}
+				</ul>
+			</aside>
 		</section>
 	</article>
 {% endblock %}

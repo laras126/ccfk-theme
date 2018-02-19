@@ -1,0 +1,12 @@
+.sidebar {
+}
+
+.widgets {
+	@include unstyle-list;
+}
+
+.widget {
+	background-color: $color-white;
+	padding: 5%;
+	margin-bottom: 30px;
+}
