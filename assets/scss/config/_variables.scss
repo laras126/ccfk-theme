@@ -17,6 +17,9 @@ $phablet-start: 'min-width: #{map-get($screens, 'mobile')}';
 $tablet-start: 'min-width: #{map-get($screens, 'tablet')}';
 $desktop-start: 'min-width: #{map-get($screens, 'desktop')}';
 
+$desktop-nav: $tablet-start;
+$mobile-nav: 'max-width: #{map-get($screens, 'tablet') - 1}';
+
 body {
   &:after {
     position: fixed;
@@ -88,10 +91,10 @@ $color-med:		  $light-blue;
 $color-dark:		$dark-red;
 $color-vdark:		$black;
 
-$c-text-dark: 		$color-vdark;
-$c-text-med: 			$grey;
-$c-text-medlight: lighten($c-text-med, 20%);
-$c-text-light: 		$white;
+$color-white:         $white;
+$color-grey:          $grey;
+$color-grey-light:    lighten($grey, 20%);
+$color-grey-vlight:   #EEEEEE;;
 
 $c-link-color:		darken($color-med, 10%);
 $c-link-hover: 		$color-vdark;

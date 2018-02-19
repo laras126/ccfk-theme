@@ -1,6 +1,6 @@
 .page__header {
 	background-color: $color-vdark;
-	color: $c-text-light;
+	color: $color-white;
 
 	@supports not ( display: grid ) {
 		display: flex;
@@ -33,6 +33,9 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+		grid-column: 2 / span 1;
+	}
+	@media( $desktop-start ) {
 		grid-column: 2 / span 2;
 	}
 }
@@ -62,11 +65,23 @@
 		display: block;
 		height: 50vh;
 		width: 100%;
-		grid-column: 4 / span 4;
+		grid-column: 3 / span 3;
 
 		@supports not ( display: grid ) {
 			width: 50%;
 		}
 
 	}
+	@media( $desktop-start ) {
+		grid-column: 4 / span 4;
+	}
+}
+
+.page__main {
+	// background-color: $color-grey-vlight;
+	// border-left: 10px solid $color-dark;
+}
+
+.page__content {
+	background-color: $color-white;
 }

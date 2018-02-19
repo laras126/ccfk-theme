@@ -41,19 +41,17 @@ input[type="search"],
 input[type="tel"] {
 	padding: $size-sm/2 $size-sm;
 	background: $white;
-	color: $c-text-light;
-	outline: 5px solid rgba($color-vlight, 0);
-	border: 1px solid $color-light;
+	border: 1px solid $color-grey-light;
+	outline: 2px solid transparent;
 
 	@include fonts(body);
 
 	font-weight: 300;
-	border-radius: 2px;
 	transition: 0.2s ease all;
 
 	&:focus {
-		// border-color: $accent-med;
-		outline: 5px solid $color-light;
+		border: 1px solid $color-med;
+		outline: 2px solid $color-med !important;
 	}
 }
 
@@ -76,9 +74,9 @@ input[type="text"] {
 
 input[type="submit"],
 button {
-	@include button($color-dark);
-	cursor: pointer;
-	-webkit-appearance: none;
+	&:not(.give-donation-level-btn) {
+		@include button($color-dark);
+	}
 }
 
 select,
@@ -100,6 +98,11 @@ input[type="checkbox"]:focus {
 	outline: 5px auto -webkit-focus-ring-color;
 	outline-offset: -2px;
 }
+
+
+//
+// MailChimp
+//
 
 .asterisk {
 	color: $color-dark;
@@ -126,4 +129,33 @@ input[type="checkbox"]:focus {
 		grid-template-columns: repeat(2, 1fr);
 		grid-column-gap: $size-md;
 	}
+}
+
+.give-btn {
+	&:hover {
+
+	}
+}
+
+//
+// Gravity Forms
+//
+
+.gform_wrapper {
+
+	input[value="Other"] {
+		font-size: $size-sm !important;
+	}
+
+	.gfield_checkbox > li {
+		display: flex;
+		> label {
+			margin-left: $size-xs !important; // Because.
+		}
+	}
+
+}
+
+.gform_wrapper .field_sublabel_above .ginput_complex.ginput_container label, .gform_wrapper .field_sublabel_above div[class*=gfield_date_].ginput_container label, .gform_wrapper .field_sublabel_above div[class*=gfield_time_].ginput_container label, .gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label, .gform_wrapper .field_sublabel_below div[class*=gfield_date_].ginput_container label, .gform_wrapper .field_sublabel_below div[class*=gfield_time_].ginput_container label {
+	letter-spacing: 0 !important;
 }

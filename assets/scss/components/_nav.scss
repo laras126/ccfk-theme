@@ -7,19 +7,25 @@ $desktop-nav: 'min-width: #{map-get($screens, 'tablet')}';
 
 .nav__toggle {
 	@media( $mobile-nav ) {
+		display: flex;
 		position: relative;
 		z-index: $z-tiptop;
 		background-color: $color-dark;
-		color: $c-text-light;
+		color: $color-white;
 		text-transform: uppercase;
 		font-size: $size-sm;
 		border: 0;
-		padding: $size-xs;
+
+		&:before {
+			content: '+';
+			margin-right: $size-xs;
+		}
 
 		&:focus {
 			outline: 5px solid $color-vdark;
 		}
 	}
+
 	@media( $desktop-nav ) {
 		display: none;
 	}
@@ -37,6 +43,7 @@ $desktop-nav: 'min-width: #{map-get($screens, 'tablet')}';
 		z-index: $z-top;
 		min-width: 50vw;
 		height: 100vh;
+		padding-top: $size-lg;
 
 		display: flex;
 		flex-direction: column;
@@ -63,11 +70,27 @@ $desktop-nav: 'min-width: #{map-get($screens, 'tablet')}';
 }
 
 .nav__list__item {
-	margin-right: 2vw;
+	padding-left: $size-sm;
+	padding-right: $size-sm;
+
+	@media( $mobile-nav ) {
+		&.current-menu-item {
+			background: $color-dark;
+		}
+	}
+
 }
 
 .nav__link {
-	color: $c-text-light;
+	@media( $desktop-nav ) {
+		color: $color-dark;
+		border-top: 10px solid transparent;
+
+		.current-menu-item & {
+			color: $color-vdark;
+			border-color: $color-dark;
+		}
+	}
 	font-weight: $font-weight-strong;
 	text-decoration: none;
 	display: inline-block;

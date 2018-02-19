@@ -5,8 +5,7 @@
   color: $text-color;
 
   border: 2px solid lighten($button-color, 10%);
-  padding: $size-sm $size-sm-md;
-  display: inline-block;
+  padding: $size-xs $size-sm;
 
 	&:hover,
 	&:focus {

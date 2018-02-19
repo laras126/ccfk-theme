@@ -19,7 +19,7 @@ class StarterSite extends TimberSite {
 	function __construct() {
 		add_theme_support( 'post-formats' );
 		add_theme_support( 'post-thumbnails' );
-		add_theme_support( 'align-wide' );
+		// add_theme_support( 'align-wide' );
 		add_theme_support( 'menus' );
 		add_post_type_support( 'page', 'excerpt' );
 		add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
@@ -67,7 +67,6 @@ new StarterSite();
 
 function ccfk_scripts() {
 	wp_enqueue_style( 'ccfk-style', get_template_directory_uri() . '/assets/css/main.css' );
-
 	wp_enqueue_script( 'ccfk-scripts', get_template_directory_uri() . '/assets/js/build/scripts.js' );
 }
 add_action( 'wp_enqueue_scripts', 'ccfk_scripts' );

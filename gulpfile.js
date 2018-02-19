@@ -28,7 +28,7 @@ var babelFileList = [
 gulp.task('sass', function() {
   return gulp.src('assets/scss/main.scss')
     .pipe(sass({
-      errLogToConsole: false,
+      errLogToConsole: true,
       onError: function(err) {
         return notify().write(err);
       }

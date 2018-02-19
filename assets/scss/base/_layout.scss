@@ -4,32 +4,45 @@
 
 .grid-outer {
 	display: grid;
-	padding-left: 5%;
-	padding-right: 5%;
 	grid-template-columns: minmax(min-content, 600px);
+	grid-template-areas: "content"
+											 "sidebar";
+
 	place-content: center;
 
 	@media( $tablet-start ) {
 		padding-left: 0;
 		padding-right: 0;
 		grid-column-gap: 30px;
-		grid-template-columns: .5fr repeat(3, 1fr) 1fr;
+		grid-template-columns: .5fr repeat(3, minmax(100px, 300px)) .5fr;
+		grid-template-areas: "... content content sidebar ...";
 	}
 
 	@media( $desktop-start ) {
-		grid-template-columns: .5fr repeat(5, 1fr) .5fr;
+		grid-template-columns: .5fr repeat(5, minmax(100px, 250px)) .5fr;
+		grid-template-areas: "... content content content sidebar sidebar ...";
 	}
 
 }
 
 .content {
+	@media( $mobile-only ) {
+		padding-left: 3%;
+		padding-right: 3%;
+	}
 	padding-top: $size-md;
 	max-width: map-get($screens, 'tablet');
-	grid-column: 1 / 6;
+	grid-area: content;
+}
 
-	@media( $tablet-start ) {
-		grid-column: 2 / 5;
+
+.sidebar {
+	@media( $mobile-only ) {
+		padding-left: 3%;
+		padding-right: 3%;
 	}
+	max-width: map-get($screens, 'tablet');
+	grid-area: sidebar;
 }
 
 .inner {
