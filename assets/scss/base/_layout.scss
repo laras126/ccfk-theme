@@ -28,11 +28,8 @@
 .content {
 	max-width: map-get($screens, 'tablet');
 	grid-area: content;
-
-	@media( $mobile-only ) {
-		padding-left: 3%;
-		padding-right: 3%;
-	}
+	padding-left: 5%;
+	padding-right: 5%;
 }
 
 .sidebar {

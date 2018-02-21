@@ -45,9 +45,8 @@ input[type="tel"] {
 	outline: 2px solid transparent;
 
 	@include fonts(body);
-
 	font-weight: 300;
-	transition: 0.2s ease all;
+	@include transition(outline);
 
 	&:focus {
 		border: 1px solid $color-med;

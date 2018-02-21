@@ -19,7 +19,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="author" href="{{ site.theme.link }}/humans.txt" />
     <link rel="pingback" href="{{ site.pingback_url }}" />
-	<link href="https://fonts.googleapis.com/css?family=Crimson+Text:600|Source+Sans+Pro:400,400i,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700" rel="stylesheet">
 
 	<script>
 		(function fontLoading() {
@@ -32,8 +32,7 @@
 				Promise.all([
 					document.fonts.load("400 1rem Source Sans Pro"),
 					document.fonts.load("700 1rem Source Sans Pro"),
-					document.fonts.load("italic 1rem Source Sans Pro"),
-					document.fonts.load("700 1rem Crimson Text")
+					document.fonts.load("italic 1rem Source Sans Pro")
 				]).then(function () {
 					document.documentElement.className += " fonts-loaded";
 					// Optimization for Repeat Views

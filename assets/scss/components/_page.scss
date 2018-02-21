@@ -41,16 +41,17 @@
 }
 
 .page__title {
-	font-size: $size-lg;
+	font-size: $size-md-lg;
+	margin-bottom: 0;
 
 	@media( $phablet-start ) {
-		margin-bottom: 0;
+		font-size: $size-lg;
 	}
 }
 
 .page__tagline {
 	font-size: $size-sm-md;
-
+	margin-top: 0;
 	@media( $tablet-start ) {
 		max-width: 600px;
 		font-size: $size-md;
@@ -63,7 +64,7 @@
 	@media( $tablet-start ) {
 		object-fit: cover;
 		display: block;
-		max-height: 50vh;
+		min-height: 40vh;
 		width: 100%;
 		grid-column: 3 / span 3;
 		border-left: 10px solid $color-grey;
@@ -80,17 +81,14 @@
 
 .page__main {
 	background-color: $color-grey-vlight;
-	padding-top: 30px;
-	padding-bottom: 30px;
+	padding-top: 15px;
+	@media( $tablet-start ) {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
 }
 
 .page__content {
 	background-color: $color-white;
 	padding-top: $size-md;
-	padding-left: 5%;
-	padding-right: 5%;
-
-	@media( $desktop-start ) {
-		// margin-left: -5%;
-	}
 }

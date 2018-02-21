@@ -21,7 +21,6 @@
 }
 
 
-
 @mixin span-4 {
 	grid-column: 1;
 	@media( $tablet-start ) {
@@ -35,6 +34,10 @@
   transform: translateZ(0);
   backface-visibility: hidden;
   perspective: 1000px;
+}
+
+@mixin transition($property) {
+	transition: 0.2s ease $property;
 }
 
 // Font loading

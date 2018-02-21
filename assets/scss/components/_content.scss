@@ -30,18 +30,24 @@ figure {
 	margin-left: 0;
 	margin-right: 0;
 
-	&.alignleft {
-		float: left;
-	}
+}
 
-	&.alignright {
+.alignleft {
+	@media( $tablet-start ) {
+		float: left;
+		padding-right: 3%;
+	}
+}
+
+.alignright {
+	@media( $tablet-start ) {
 		float: right;
-		// margin-right: -5%;
+		padding-right: 3%;
 	}
 }
 
 .wp-block-separator {
-	margin: 2em 0 1em 0;
+	margin: $size-md 0 $size-sm 0;
 }
 
 .alignwide {

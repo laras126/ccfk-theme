@@ -16,6 +16,7 @@
 }
 
 .footer__copy {
+	display: flex;
 	margin-top: $size-sm;
 	background: $color-grey;
 	font-size: $size-sm;

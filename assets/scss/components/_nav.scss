@@ -83,15 +83,20 @@ $desktop-nav: 'min-width: #{map-get($screens, 'tablet')}';
 
 .nav__link {
 	color: $color-white;
+
 	@media( $desktop-nav ) {
 		color: $color-dark;
 		border-top: 10px solid transparent;
+		@include transition(all);
 
-		.current-menu-item & {
+		.current-menu-item &,
+		&:hover {
 			color: $color-vdark;
 			border-color: $color-dark;
 		}
+
 	}
+
 	font-weight: $font-weight-strong;
 	text-decoration: none;
 	display: inline-block;

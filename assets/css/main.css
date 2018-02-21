@@ -228,11 +228,9 @@ body:after {
 
 .content {
   max-width: 900px;
-  grid-area: content; }
-  @media (max-width: 640px) {
-    .content {
-      padding-left: 3%;
-      padding-right: 3%; } }
+  grid-area: content;
+  padding-left: 5%;
+  padding-right: 5%; }
 
 .sidebar {
   max-width: 900px;
@@ -253,14 +251,15 @@ body:after {
     max-width: 100%; }
 
 body {
-  font-family: Georgia, serif;
+  font-family: Arial, serif;
   line-height: 1.5;
   font-size: 115%; }
   .fonts-loaded body {
     font-family: "Source Sans Pro", Arial, sans-serif; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Arial, sans-serif; }
+  font-family: Arial, sans-serif;
+  line-height: 1.3; }
   .fonts-loaded h1, .fonts-loaded h2, .fonts-loaded h3, .fonts-loaded h4, .fonts-loaded h5, .fonts-loaded h6 {
     font-family: "Source Sans Pro", Arial, sans-serif; }
 
@@ -304,11 +303,11 @@ input[type="tel"] {
   background: #ffffff;
   border: 1px solid #aaaaaa;
   outline: 2px solid transparent;
-  font-family: Georgia, serif;
+  font-family: Arial, serif;
   font-weight: 300;
-  -webkit-transition: 0.2s ease all;
-  -o-transition: 0.2s ease all;
-  transition: 0.2s ease all; }
+  -webkit-transition: 0.2s ease outline;
+  -o-transition: 0.2s ease outline;
+  transition: 0.2s ease outline; }
   .fonts-loaded textarea, .fonts-loaded
   input[type="text"], .fonts-loaded
   input[type="password"], .fonts-loaded
@@ -563,8 +562,11 @@ input[type="checkbox"]:focus {
   @media (min-width: 900px) {
     .nav__link {
       color: #B51414;
-      border-top: 10px solid transparent; }
-      .current-menu-item .nav__link {
+      border-top: 10px solid transparent;
+      -webkit-transition: 0.2s ease all;
+      -o-transition: 0.2s ease all;
+      transition: 0.2s ease all; }
+      .current-menu-item .nav__link, .nav__link:hover {
         color: #050305;
         border-color: #B51414; } }
 
@@ -626,13 +628,15 @@ input[type="checkbox"]:focus {
       grid-column: 2 / span 2; } }
 
 .page__title {
-  font-size: 3rem; }
+  font-size: 2.2rem;
+  margin-bottom: 0; }
   @media (min-width: 641px) {
     .page__title {
-      margin-bottom: 0; } }
+      font-size: 3rem; } }
 
 .page__tagline {
-  font-size: 1.2rem; }
+  font-size: 1.2rem;
+  margin-top: 0; }
   @media (min-width: 900px) {
     .page__tagline {
       max-width: 600px;
@@ -645,7 +649,7 @@ input[type="checkbox"]:focus {
       -o-object-fit: cover;
          object-fit: cover;
       display: block;
-      max-height: 50vh;
+      min-height: 40vh;
       width: 100%;
       grid-column: 3 / span 3;
       border-left: 10px solid #777; }
@@ -658,14 +662,15 @@ input[type="checkbox"]:focus {
 
 .page__main {
   background-color: #EEEEEE;
-  padding-top: 30px;
-  padding-bottom: 30px; }
+  padding-top: 15px; }
+  @media (min-width: 900px) {
+    .page__main {
+      padding-top: 30px;
+      padding-bottom: 30px; } }
 
 .page__content {
   background-color: #ffffff;
-  padding-top: 1.6rem;
-  padding-left: 5%;
-  padding-right: 5%; }
+  padding-top: 1.6rem; }
 
 @media (min-width: 900px) {
   .content h2 {
@@ -691,13 +696,19 @@ figure {
 .wp-block-image {
   margin-left: 0;
   margin-right: 0; }
-  .wp-block-image.alignleft {
-    float: left; }
-  .wp-block-image.alignright {
-    float: right; }
+
+@media (min-width: 900px) {
+  .alignleft {
+    float: left;
+    padding-right: 3%; } }
+
+@media (min-width: 900px) {
+  .alignright {
+    float: right;
+    padding-right: 3%; } }
 
 .wp-block-separator {
-  margin: 2em 0 1em 0; }
+  margin: 1.6rem 0 1rem 0; }
 
 @media (min-width: 900px) {
   .alignwide {
@@ -763,6 +774,9 @@ th {
         flex-wrap: wrap; } }
 
 .footer__copy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin-top: 1rem;
   background: #777;
   font-size: 1rem; }
@@ -776,7 +790,15 @@ th {
 .widget {
   background-color: #ffffff;
   padding: 5%;
-  margin-bottom: 30px; }
+  margin-top: 15px;
+  margin-bottom: 15px; }
+  @media (min-width: 900px) {
+    .widget {
+      margin-bottom: 30px;
+      margin-top: 0; } }
+
+.widget__title {
+  margin-top: 0; }
 
 .a11y {
   clip: rect(1px 1px 1px 1px);
