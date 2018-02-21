@@ -649,7 +649,7 @@ input[type="checkbox"]:focus {
       -o-object-fit: cover;
          object-fit: cover;
       display: block;
-      min-height: 40vh;
+      height: 40vh;
       width: 100%;
       grid-column: 3 / span 3;
       border-left: 10px solid #777; }
