@@ -2,8 +2,8 @@
 
 {% block content %}
 	<article class="page__article">
-		<header class="page__header {% if post.thumbnail.src %}with-thumbnail {% endif %}">
-			<div class="page__header-contents">
+		<header class="page__header {% if post.thumbnail.src %}with-thumbnail {% endif %}grid-outer">
+			<div class="page__header-contents content">
 				<h1 class="page__title">{{post.title}}</h1>
 				{% if post.post_excerpt %}
 					<p class="page__tagline">{{post.post_excerpt}}</p>

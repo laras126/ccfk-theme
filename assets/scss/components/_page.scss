@@ -64,7 +64,7 @@
 	@media( $tablet-start ) {
 		object-fit: cover;
 		display: block;
-		height: 40vh;
+		height: 100%;
 		width: 100%;
 		grid-column: 3 / span 3;
 		border-left: 10px solid $color-grey;
