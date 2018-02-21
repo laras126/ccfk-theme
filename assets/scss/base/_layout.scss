@@ -33,12 +33,13 @@
 }
 
 .sidebar {
+	max-width: map-get($screens, 'tablet');
+	grid-area: sidebar;
+
 	@media( $mobile-only ) {
 		padding-left: 3%;
 		padding-right: 3%;
 	}
-	max-width: map-get($screens, 'tablet');
-	grid-area: sidebar;
 }
 
 .inner {
