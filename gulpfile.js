@@ -23,7 +23,7 @@ var babelFileList = [
   './assets/js/src/main.js',
 ];
 
-// var entryPoint = './assets/js/src/main.js';
+var longformEntry = './assets/js/src/longform.js';
 
 gulp.task('sass', function() {
   return gulp.src('assets/scss/main.scss')
@@ -44,16 +44,19 @@ gulp.task('sass', function() {
 });
 
 // https://gist.github.com/dverbovyi/7f71879bec8a16847dee
-// gulp.task('js', function() {
-//   return browserify(entryPoint, {debug: true, extensions: ['es6']})
-//     .transform("babelify", {presets: ["es2015"]})
-//     .bundle()
-//     .pipe(source('./assets/js/src/bundle.js'))
-//     .pipe(buffer())
-//     .pipe(sourcemaps.init({loadMaps: true}))
-//     .pipe(sourcemaps.write())
-//     .pipe(gulp.dest('./assets/js/build/'))
-// });
+gulp.task('longform-js', function() {
+  return gulp.src(longformEntry)
+    .pipe(babel({
+            presets: ['es2015']
+        }))
+    .pipe(addsrc.prepend('./assets/js/src/flickity.js'))
+    .pipe(concat('longform.js'))
+    .pipe(sourcemaps.init({ loadMaps: true }))
+    .pipe(gulp.dest('assets/js/build'))
+    .pipe(uglify())
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('assets/js/build'));
+});
 
 
 gulp.task('js', function() {
@@ -72,7 +75,7 @@ gulp.task('js', function() {
 
 gulp.task('dev', function() {
   gulp.watch('assets/scss/**/*.scss', ['sass']);
-  gulp.watch('assets/js/src/*.js', ['js']);
+  gulp.watch('assets/js/src/*.js', ['js', 'longform-js']);
 });
 
 
