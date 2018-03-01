@@ -1,0 +1,24 @@
+.page__header--carousel {
+	position: relative;
+}
+
+.carousel__overlay {
+	position: absolute;
+	top: 0;
+}
+
+.carousel__cell {
+	width: 100%;
+	height: 80vh;
+}
+
+.cell__content {
+	position: absolute;
+}
+
+.cell__image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
