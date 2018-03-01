@@ -212,8 +212,7 @@ body:after {
   display: grid;
   grid-template-columns: minmax(-webkit-min-content, 600px);
   grid-template-columns: minmax(min-content, 600px);
-  grid-template-areas: "content" "sidebar";
-  place-content: center; }
+  grid-template-areas: "content" "sidebar"; }
   @media (min-width: 900px) {
     .grid-outer {
       padding-left: 0;
@@ -226,11 +225,24 @@ body:after {
       grid-template-columns: 0.5fr repeat(5, minmax(100px, 250px)) 0.5fr;
       grid-template-areas: "... content content content sidebar sidebar ..."; } }
 
-.content {
+.content,
+.grid-outer > *:not(img):not(video):not(.content):not(.alignwide):not(.alignfull):not(.sidebar) {
   max-width: 900px;
-  grid-area: content;
   padding-left: 5%;
   padding-right: 5%; }
+  @media (min-width: 900px) {
+    .content,
+    .grid-outer > *:not(img):not(video):not(.content):not(.alignwide):not(.alignfull):not(.sidebar) {
+      grid-column: 1 / span 2; } }
+  @media (min-width: 900px) {
+    .content,
+    .grid-outer > *:not(img):not(video):not(.content):not(.alignwide):not(.alignfull):not(.sidebar) {
+      grid-column: 2 / span 3; } }
+
+.alignfull {
+  grid-column: 1 / -1; }
+  .alignfull img {
+    width: 100%; }
 
 .sidebar {
   max-width: 900px;
@@ -696,6 +708,12 @@ figure {
 .wp-block-image {
   margin-left: 0;
   margin-right: 0; }
+  .wp-block-image img {
+    max-width: 100%; }
+
+@media (min-width: 900px) {
+  .alignwide {
+    grid-column: 2 / 7; } }
 
 @media (min-width: 900px) {
   .alignleft {
@@ -707,12 +725,22 @@ figure {
     float: right;
     padding-right: 3%; } }
 
+.wp-block-button .wp-block-button__link {
+  background-color: #444444;
+  border-radius: 2px;
+  color: #ffffff;
+  border: 2px solid #5e5e5e;
+  padding: 0.7rem 1rem; }
+  .wp-block-button .wp-block-button__link:hover, .wp-block-button .wp-block-button__link:focus {
+    background-color: #2b2b2b;
+    color: #ffffff;
+    border-color: #444444; }
+  .wp-block-button .wp-block-button__link:active {
+    background-color: black;
+    border-color: #2b2b2b; }
+
 .wp-block-separator {
   margin: 1.6rem 0 1rem 0; }
-
-@media (min-width: 900px) {
-  .alignwide {
-    grid-column: 2 / 7; } }
 
 .gallery {
   display: -webkit-box;
