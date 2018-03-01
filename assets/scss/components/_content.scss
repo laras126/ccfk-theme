@@ -1,5 +1,4 @@
 .content {
-
 	@media( $tablet-start ) {
 		h2 {
 			font-size: $size-md-lg;
@@ -29,7 +28,20 @@ figure {
 .wp-block-image {
 	margin-left: 0;
 	margin-right: 0;
+	img {
+		max-width: 100%;
+	}
+}
 
+
+//
+// Alignment
+//
+
+.alignwide {
+	@media( $tablet-start ) {
+		grid-column: 2 / 7;
+	}
 }
 
 .alignleft {
@@ -46,15 +58,19 @@ figure {
 	}
 }
 
+
+//
+// Blocks
+//
+
+.wp-block-button .wp-block-button__link {
+	@include button($color-grey-dark);
+}
+
 .wp-block-separator {
 	margin: $size-md 0 $size-sm 0;
 }
 
-.alignwide {
-	@media( $tablet-start ) {
-		grid-column: 2 / 7;
-	}
-}
 
 //
 // Gallery

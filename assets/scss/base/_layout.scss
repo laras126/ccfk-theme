@@ -8,8 +8,6 @@
 	grid-template-areas: "content"
 											 "sidebar";
 
-	place-content: center;
-
 	@media( $tablet-start ) {
 		padding-left: 0;
 		padding-right: 0;
@@ -25,11 +23,25 @@
 
 }
 
-.content {
+.content,
+.grid-outer > *:not(img):not(video):not(.content):not(.alignwide):not(.alignfull):not(.sidebar) {
 	max-width: map-get($screens, 'tablet');
-	grid-area: content;
 	padding-left: 5%;
 	padding-right: 5%;
+
+	@media( $tablet-start ) {
+		grid-column: 1 / span 2;
+	}
+	@media( $tablet-start ) {
+		grid-column: 2 / span 3;
+	}
+}
+
+.alignfull {
+	grid-column: 1 / -1;
+	img {
+		width: 100%;
+	}
 }
 
 .sidebar {
