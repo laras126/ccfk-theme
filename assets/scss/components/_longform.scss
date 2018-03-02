@@ -1,0 +1,24 @@
+.longform-nav__list {
+	@include unstyle-list;
+	display: flex;
+	flex-direction: column;
+
+	> li a {
+		font-weight: $font-weight-strong;
+		text-decoration: none;
+
+		&:hover {
+			&:before {
+				@include transition(left);
+				left: 5px;
+			}
+		}
+
+		&:before {
+			position: relative;
+			content: '\021E2';
+			color: $color-darker;
+			padding-right: 10px;
+		}
+	}
+}
