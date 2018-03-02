@@ -7,16 +7,14 @@
 	grid-template-columns: minmax(min-content, 600px);
 	grid-template-areas: "content"
 											 "sidebar";
+	justify-content: center;
 
 	@media( $tablet-start ) {
 		padding-left: 0;
 		padding-right: 0;
 		grid-column-gap: 30px;
-		grid-template-columns: .5fr repeat(3, minmax(100px, 300px)) .5fr;
-		grid-template-areas: "... content content sidebar ...";
-	}
-
-	@media( $desktop-start ) {
+		// grid-template-columns: .5fr repeat(3, minmax(100px, 300px)) .5fr;
+		// grid-template-areas: "... content content sidebar ...";
 		grid-template-columns: .5fr repeat(5, minmax(100px, 250px)) .5fr;
 		grid-template-areas: "... content content content sidebar sidebar ...";
 	}
@@ -24,16 +22,17 @@
 }
 
 .content,
-.grid-outer > *:not(img):not(video):not(.content):not(.alignwide):not(.alignfull):not(.sidebar) {
+.grid-outer > *:not(img):not(video):not(.content):not(.alignwide):not(.alignfull):not(.exclude) {
 	max-width: map-get($screens, 'tablet');
-	padding-left: 5%;
-	padding-right: 5%;
+	padding-left: $gutter;
+	padding-right: $gutter;
 
 	@media( $tablet-start ) {
 		grid-column: 1 / span 2;
 	}
+
 	@media( $tablet-start ) {
-		grid-column: 2 / span 3;
+		grid-column: 2 / span 4;
 	}
 }
 
@@ -49,15 +48,15 @@
 	grid-area: sidebar;
 
 	@media( $mobile-only ) {
-		padding-left: 3%;
-		padding-right: 3%;
+		padding-left: $gutter;
+		padding-right: $gutter;
 	}
 }
 
 .inner {
 	margin: 0 auto;
-	padding-left: 3vw;
-	padding-right: 3vw;
+	padding-left: $gutter;
+	padding-right: $gutter;
 
 	@media( $tablet-start ) {
 		max-width: map-get( $screens, 'desktop' );
