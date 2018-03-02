@@ -20,3 +20,14 @@ a, a:link {
 		color: $color-darker;
 	}
 }
+
+.meta__title {
+	text-transform: uppercase;
+	color: $color-grey;
+	font-size: $size-sm;
+	margin-bottom: 0;
+}
+
+.meta__desc {
+	margin-top: 0;
+}
