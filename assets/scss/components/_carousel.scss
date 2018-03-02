@@ -3,13 +3,42 @@
 }
 
 .carousel__overlay {
-	position: absolute;
-	top: 0;
+	@media ( $tablet-start ) {
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		width: 100%;
+		height: 100%;
+
+		margin-top: $gutter;
+		grid-template-rows: min-content;
+	}
 }
+
+	.overlay {
+		background-color: $white;
+		border-top: 10px solid $color-light;
+		padding-left: $gutter;
+		padding-right: $gutter;
+		padding-bottom: $gutter;
+		grid-column: 1 / -1;
+
+		@media( $tablet-start ) {
+			margin-top: $gutter;
+			margin-bottom: $gutter;
+			grid-column: 2 / span 2;
+		}
+
+	}
 
 .carousel__cell {
 	width: 100%;
 	height: 80vh;
+}
+
+.carousel__title {
+	font-size: $size-md-lg;
+	line-height: $line-height-sm;
 }
 
 .cell__content {
@@ -21,4 +50,6 @@
 	height: 100%;
 	object-fit: cover;
 }
+
+
 
