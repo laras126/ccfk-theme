@@ -64,6 +64,7 @@ gulp.task('js', function() {
     .pipe(babel({
             presets: ['es2015']
         }))
+    .pipe(addsrc.prepend('./assets/js/src/modernizr.js'))
     .pipe(addsrc.prepend('./assets/js/src/plugins.js'))
     .pipe(concat('scripts.js'))
     .pipe(sourcemaps.init({ loadMaps: true }))
