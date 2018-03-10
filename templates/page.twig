@@ -2,6 +2,7 @@
 
 {% block content %}
 	<article class="page__article">
+
 		<header class="page__header {% if post.thumbnail.src %}with-thumbnail {% endif %}grid-outer">
 			<div class="page__header-contents content">
 				<h1 class="page__title">{{post.title}}</h1>
@@ -13,6 +14,7 @@
 				<img class="page__header-image" src="{{post.thumbnail.src}}" alt="">
 			{% endif %}
 		</header>
+
 		<section class="page__main grid-outer">
 			<div class="page__content">
 				{{post.content}}
@@ -23,5 +25,6 @@
 				</ul>
 			</aside>
 		</section>
+
 	</article>
 {% endblock %}

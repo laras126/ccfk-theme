@@ -3,41 +3,123 @@
 {% block content %}
 	<article class="page__article">
 
-		<header class="page__header--carousel">
-			<div class="carousel__overlay grid-outer">
-				<div class="overlay exclude">
-					<h1 class="carousel__title">2018 Philadelphia <br>Concours D'elegance</h1>
-					<h5 class="meta__title">When</h5>
-					<p class="meta__desc"><strong>Saturday June 16, 2018</strong><br>
-					<strong>10:00am – 4:00pm</strong><br>
-					<em>(Preview Gala: Friday June 15, 6:30pm)</em><br>
-					<h5 class="meta__title">Where</h5>
-					<p class="meta__desc">Simeone Automotive Museum<br>
-					6825-31 Norwitch Dr, Philadelphia, PA 19153</p>
-					<nav class="longform-nav">
-						<ul class="longform-nav__list">
-							<li><a href="#register">Register Your Car</a></li>
-							<li><a href="#tickets">Buy Tickets</a></li>
-							<li><a href="#sponsor">Sponsor</a></li>
-							<li><a href="#volunteer">Volunteer</a></li>
-						</ul>
-					</nav>
-				</div>
+		<header class="page__header--longform grid-outer longform-rows">
+
+			<div class="longform-image exclude">
+				<img src="{{post.thumbnail.src}}" alt="">
 			</div>
-			<div class="carousel" data-flickity='{ "cellAlign": "left", "contain": true }'>
-				<div class="carousel__cell">
-					<img class="cell__image" src="{{post.thumbnail.src}}" alt="">
-				</div>
-				<div class="carousel__cell">
-					<img class="cell__image" src="{{post.thumbnail.src}}" alt="">
-				</div>
+
+			<div class="longform-details exclude">
+				<h1 class="page__title">2018 Philadelphia <br>Concours D'elegance</h1>
+				<h5 class="meta__title">What</h5>
+				<p class="meta__desc">The Concours d'Elegance is a classic car show and competition to support birth defects and rare disease research at The Children's Hospital of Philadelphia.</p>
+				<h5 class="meta__title">When</h5>
+				<p class="meta__desc"><strong>Saturday June 16, 2018</strong><br>
+				<strong>10:00am – 4:00pm</strong><br>
+				<em>(Preview Gala: Friday June 15, 6:30pm)</em><br></p>
+				<h5 class="meta__title">Where</h5>
+				<p class="meta__desc">Simeone Automotive Museum<br>
+				6825-31 Norwitch Dr, Philadelphia, PA 19153</p>
 			</div>
+
+			<nav class="longform-nav exclude">
+				<ul class="longform-nav__list">
+					<li><a href="#register">Register Your Car</a></li>
+					<li><a href="#tickets">Buy Tickets</a></li>
+					<li><a href="#sponsor">Sponsor</a></li>
+					<li><a href="#volunteer">Volunteer</a></li>
+				</ul>
+			</nav>
+
 		</header>
 
-		<section class="page__main grid-outer">
-			{{post.content}}
+		<section class="page__section grid-outer" id="register">
+
+			<header class="section__header">
+				<h2>Register Your Car</h2>
+				<p>While the Premier Concours features invited class and antique automobiles, we invite all individuals to register for the Car Corral.</p>
+			</header>
+
+			<div class="section__content">
+				<h3>2018 Registration Forms</h3>
+				<ul>
+					<li>Premier Concours Online Registration (or download a PDF)</li>
+					<li>Car Corral Online Registration (or download a PDF)</li>
+				</ul>
+
+				<h3>Should I register my car for the Concours or the Corral?</h3>
+				<p>Generally, cars manufactured prior to 1970 will be considered for acceptance into the Premier Concours. We invite all individuals to register for the Car Corral for a fee of $50 per space.</p>
+			</div>
 		</section>
 
+		<section class="page__section grid-outer" id="tickets">
 
+			<header class="section__header">
+				<h2>Buy Tickets</h2>
+				<p>Puchase tickets for both the main all-day Concours on Saturday, June 16, or the Preview Gala, June 15 from 6:30-10:00pm.</p>
+			</header>
+
+			<div class="section__content">
+				<h3>Preview Gala</h3>
+				<p>Friday, June 15, 6:30-10:00pm</p>
+
+				<p>Enjoy exclusive early access to a selection of the concours’s vast range of American and Auropean classic and antique automobiles before it opens to the public the following day. Join us for a festive evening of cocktails, dinner, previews, silent auction and program keynote!
+
+				<p><strong>Ticket holders for the gala will receive a complimentary ticket to the Saturday June 16, 2018 Concours d'Elegance event.</strong> So join us the following day, on Saturday June 16th, for the premier concours & car corral show, judging and award presentations, music and kid friendly acitvities, silent auction, and local food vendors.</p>
+
+				<iframe src="https://eventbrite.com/tickets-external?eid=41840071781&ref=etckt"></iframe>
+
+				<h3>Concours d'Elegance</h3>
+				<p>Saturday June 16, 2018</p>
+				​
+				<p>The Concours d'Elegance is a classic car show and competition to support birth defects and rare disease research at The Children's Hospital of Philadelphia. This event is for car enthusiasts of all ages and is being held at the Simeone Automotive Museum in Philadelphia, PA on Saturday June 16, 2018 from 10:00am-4:00pm. Join us for a fun filled day including:</p>
+
+				<ul>
+					<li>Premier judged concours with invited classic american and european automobiles</li>
+					<li>Public car display. Register and show off your own cool car in the Premier Concours or Car Corral!</li>
+					<li>Music and kids activities​</li>
+					<li>Local food vendors</li>
+				</ul>
+
+				<p>​Funds raised will support research at Children's Hospital of Philadelphia. Help kids in need and give back to the community with a day of food, fun, cars and more!</p>
+
+				<iframe src="https://eventbrite.com/tickets-external?eid=41839413813&ref=etckt" frameborder="0"></iframe>
+
+			</div>
+		</section>
+
+		<section class="page__section grid-outer" id="sponsor">
+
+			<header class="section__header">
+				<h2>Sponsor</h2>
+				<p>Choose from a number of options to become a sponsor of our June 2018 Philadelphia Concours d'Elegance.</p>
+			</header>
+
+			<div class="section__content">
+				<p>Sponsors receive many benefits from tickets to the Concours d'Elegance to advertising placement to a feature here on our website.</p>
+				<a href="#">View our 2018 Sponsorship Packages</a>
+
+				<p>If a sponsorship isn't the right commitment for you, we accept donations of all sizes that go directly to support research for rare birth defects through the Children's Hospital of Philadelphia.</p>
+				<a href="#">Donate Now</a>
+
+			</div>
+
+		</section>
+
+		<section class="page__section grid-outer" id="volunteer">
+
+			<header class="section__header">
+				<h2>Volunteer</h2>
+				<p>Choose from a number of options to become a sponsor of our June 2018 Philadelphia Concours d'Elegance.</p>
+			</header>
+
+			<div class="section__content">
+				<p>Sponsors receive many benefits from tickets to the Concours d'Elegance to advertising placement to a feature here on our website.</p>
+				<a href="#">View our 2018 Sponsorship Packages</a>
+			</div>
+
+		</section>
+
+			{# {{post.content}} #}
 	</article>
 {% endblock %}
