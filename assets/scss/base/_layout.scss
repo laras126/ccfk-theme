@@ -7,7 +7,7 @@
 // Utilities
 
 .max {
-	max-width: $screen-lg;
+	max-width: map-get($screens, 'desktop');
 	margin: auto;
 }
 

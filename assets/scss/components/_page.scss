@@ -26,15 +26,19 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: flex-end;
 
-	> * {
-		width: 100%;
-		max-width: 600px;
+	@media( $tablet-start ) {
+		align-items: flex-end;
+
+		> * {
+			width: 100%;
+			max-width: 400px;
+		}
 	}
 }
 
 .page__header-image {
+	display: block;
 	object-fit: cover;
 	width: 100%;
 
@@ -54,16 +58,13 @@
 
 .page__main {
 	// background-color: $color-grey-vlight;
-	// padding-top: 15px;
 
-	// @media( $tablet-start ) {
-	// 	padding-top: 30px;
-	// 	padding-bottom: 30px;
-	// }
+	@media( $tablet-start ) {
+		padding-top: $gutter*2;
+	}
 }
 
 .page__content {
-	// background-color: $color-white;
-	// padding-top: $size-md;
+	background-color: $color-white;
 }
 
