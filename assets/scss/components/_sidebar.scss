@@ -6,10 +6,10 @@
 }
 
 .widget {
-	background-color: $color-white;
+	background-image: linear-gradient(to bottom left, $color-white, $color-grey-vlight);
 
 	@media( $tablet-start ) {
-		margin-bottom: 30px;
+		margin-bottom: $gutter;
 		margin-top: 0;
 	}
 }

@@ -8,7 +8,7 @@
 $screens: (
   'mobile':  641px,
   'tablet':  860px,
-  'desktop': 1100px
+  'desktop': 1200px
 );
 
 $mobile-only: 'max-width: #{map-get($screens, 'mobile') - 1}';
@@ -49,11 +49,6 @@ body {
   }
 }
 
-
-$screen-sm:		30em;
-$screen-md:		43em;
-$screen-lg:		75em;
-$screen-xl:		90em;
 
 
 // ----
