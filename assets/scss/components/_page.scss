@@ -1,43 +1,7 @@
+
 .page__header {
 	background-color: $color-vdark;
 	color: $color-white;
-
-	@supports not ( display: grid ) {
-		display: flex;
-		flex-direction: column;
-	}
-
-	@media( $tablet-start ) {
-		overflow: hidden;
-
-		@supports not ( display: grid ) {
-			flex-direction: row;
-			align-items: center;
-			justify-content: space-between;
-		}
-	}
-}
-
-.page__header-contents {
-	padding-bottom: $size-sm;
-
-	@media( $tablet-start ) {
-		@supports not( display: grid ) {
-			padding-left: 3%;
-			padding-right: 3%;
-			flex-basis: 500px;
-			margin: auto;
-			flex-grow: 0;
-		}
-
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		grid-column: 2 / span 1;
-	}
-	@media( $desktop-start ) {
-		grid-column: 2 / span 2;
-	}
 }
 
 .page__title {
@@ -52,46 +16,54 @@
 .page__tagline {
 	font-size: $size-sm-md;
 	margin-top: 0;
+
 	@media( $tablet-start ) {
-		max-width: 600px;
 		font-size: $size-md;
 	}
 }
 
-.page__header-image {
-	// display: none;
+.page__header-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-end;
 
+	> * {
+		width: 100%;
+		max-width: 600px;
+	}
+}
+
+.page__header-image {
 	object-fit: cover;
-	display: block;
-	min-height: 30vh;
-	height: 100%;
 	width: 100%;
 
+	max-height: 400px;
+	min-height: 30vh;
+
+	.no-objectfit & {
+		min-height: auto;
+		max-height: none;
+	}
+
 	@media( $tablet-start ) {
-		min-height: 50vh;
-		grid-column: 3 / span 3;
-		border-left: 10px solid $color-grey;
-
-		@supports not ( display: grid ) {
-			width: 50%;
-		}
+		clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
 	}
 
-	@media( $desktop-start ) {
-		grid-column: 4 / span 4;
-	}
 }
 
 .page__main {
-	background-color: $color-grey-vlight;
-	padding-top: 15px;
-	@media( $tablet-start ) {
-		padding-top: 30px;
-		padding-bottom: 30px;
-	}
+	// background-color: $color-grey-vlight;
+	// padding-top: 15px;
+
+	// @media( $tablet-start ) {
+	// 	padding-top: 30px;
+	// 	padding-bottom: 30px;
+	// }
 }
 
 .page__content {
-	background-color: $color-white;
-	padding-top: $size-md;
+	// background-color: $color-white;
+	// padding-top: $size-md;
 }
+

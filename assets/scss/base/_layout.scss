@@ -1,70 +1,58 @@
+
 * {
 	box-sizing: border-box;
 }
 
-.grid-outer {
-	display: grid;
-	grid-template-columns: minmax(min-content, 600px);
-	grid-template-areas: "content"
-											 "sidebar";
-	justify-content: center;
+
+// Utilities
+
+.max {
+	max-width: $screen-lg;
+	margin: auto;
+}
+
+.pad {
+	padding: $gutter;
+}
+
+// Apply grid
+
+.grid {
+	@media( $tablet-start ) {
+		display: flex;
+		justify-content: space-between;
+		@include display-grid;
+	}
+}
+
+// Sidebar layout
+
+.layout-sidebar {
 
 	@media( $tablet-start ) {
-		padding-left: 0;
-		padding-right: 0;
-		grid-column-gap: 30px;
-		grid-template-columns: .5fr repeat(3, minmax(100px, 300px)) .5fr;
-		grid-template-areas: "... content content sidebar ...";
-	}
+		grid-template-columns: 2fr 1fr;
 
-	@media( $desktop-start ) {
-		grid-template-columns: .5fr repeat(5, minmax(100px, 250px)) .5fr;
-		grid-template-areas: "... content content content sidebar sidebar ...";
+		.no-cssgrid & {
+			.content { width: calc(66.66666% - #{$gutter}); }
+			.sidebar { width: 33.33333%; }
+		}
 	}
 }
 
-.content,
-.grid-outer > *:not(img):not(video):not(.content):not(.alignwide):not(.alignfull):not(.exclude) {
-	max-width: map-get($screens, 'tablet');
-	padding-left: $gutter;
-	padding-right: $gutter;
+// Image/content layout
+
+.layout-image {
 
 	@media( $tablet-start ) {
-		grid-column: 2 / span 2;
-	}
+		grid-template-columns: repeat(5, 1fr);
+		.content { grid-column: 1 / 3; }
+		.image { grid-column: 3 / -1; }
 
-	@media( $desktop-start ) {
-		grid-column: 2 / span 3;
-	}
-}
-
-.alignfull {
-	grid-column: 1 / -1;
-	img {
-		width: 100%;
+		.no-cssgrid & {
+			.content { width: calc(40% - #{$gutter}); }
+			.image { width: 60%; }
+		}
 	}
 }
 
-.sidebar {
-	max-width: map-get($screens, 'tablet');
-	grid-area: sidebar;
 
-	@media( $mobile-only ) {
-		padding-left: $gutter;
-		padding-right: $gutter;
-	}
-}
-
-.inner {
-	margin: 0 auto;
-	padding-left: $gutter;
-	padding-right: $gutter;
-
-	@media( $tablet-start ) {
-		max-width: map-get( $screens, 'desktop' );
-	}
-
-	img {
-		max-width: 100%;
-	}
-}

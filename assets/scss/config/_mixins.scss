@@ -1,3 +1,10 @@
+
+@mixin display-grid {
+	display: grid;
+	grid-template-rows: auto;
+	grid-gap: $gutter;
+}
+
 // Button
 @mixin button( $button-color, $text-color: $white ) {
   background-color: $button-color;
@@ -20,13 +27,6 @@
 	}
 }
 
-
-@mixin span-4 {
-	grid-column: 1;
-	@media( $tablet-start ) {
-		grid-column: 2 / span 4;
-	}
-}
 
 // Hardware acceleration
 @mixin accelerate($name) {
