@@ -79,7 +79,7 @@ function ccfk_widgets_init() {
 			'name'          => __( 'Main Sidebar', 'textdomain' ),
 			'id'            => 'main_sidebar',
 			'description'   => __( 'Widgets in this area will be shown on all posts and pages.', 'textdomain' ),
-			'before_widget' => '<li id="%1$s" class="widget %2$s">',
+			'before_widget' => '<li id="%1$s" class="widget pad %2$s">',
 			'after_widget'  => '</li>',
 			'before_title'  => '<h3 class="widget__title">',
 			'after_title'   => '</h3>',
