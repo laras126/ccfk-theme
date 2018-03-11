@@ -1,0 +1,11 @@
+<header class="page__header grid layout-image">
+	<div class="page__header-content content pad">
+		<h1 class="page__title">{{post.title}}</h1>
+		{% if post.post_excerpt %}
+			<p class="page__tagline">{{post.post_excerpt}}</p>
+		{% endif %}
+	</div>
+	{% if post.thumbnail %}
+		<img class="page__header-image image" src="{{post.thumbnail.src}}" alt="">
+	{% endif %}
+</header>
