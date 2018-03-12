@@ -13,6 +13,11 @@
 .brand__text {
 	font-size: $size-sm-md;
 	flex-shrink: 0;
+
+	@media( $mobile-only ) {
+		@include a11y;
+	}
+
 	> a {
 		color: $color-vdark;
 		font-weight: $font-weight-strong;
