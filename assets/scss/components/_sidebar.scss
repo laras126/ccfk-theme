@@ -1,5 +1,3 @@
-.page__sidebar {
-}
 
 .sidebar__widgets {
 	@include unstyle-list;
@@ -7,6 +5,8 @@
 
 .widget {
 	background-image: linear-gradient(to bottom left, $color-white, $color-grey-vlight);
+	border-top: 5px solid $color-dark;
+	padding-top: 0;
 
 	@media( $tablet-start ) {
 		margin-bottom: $gutter;
@@ -15,5 +15,10 @@
 }
 
 .widget__title {
+	background: $color-vdark;
 	margin-top: 0;
+	padding: $gutter;
+	margin-left: -$gutter;
+	margin-right: -$gutter;
+	color: $color-white;
 }
