@@ -9,12 +9,16 @@ h1, h2, h3, h4, h5, h6 {
 	line-height: $line-height-sm;
 }
 
-a, a:link {
+a,
+a:link,
+a:not(.wp-block-button__link),
+a:not(.btn) {
 	color: $color-dark;
 
 	&:hover {
 		color: $color-vdark;
 	}
+}
 
 	&:visited:not(.nav__link) {
 		color: $color-darker;
