@@ -107,15 +107,16 @@ $line-height-base: 	1.5;
 $line-height-sm: 	  1.15;
 
 // Reevaluate these
+$base:        1rem;
 
-$size-xs: 		0.7rem;
-$size-sm: 		1rem;
-$size-sm-md: 	1.2rem;
-$size-md: 		1.6rem;
-$size-md-lg:	2.2rem;
-$size-lg:			3rem;
+$size-xs: 		$base * 0.7;
+$size-sm: 		$base * 1.4;
+$size-sm-md: 	$base * 1.6;
+$size-md: 		$base * 2;
+$size-md-lg:	$base * 2.5;
+$size-lg:			$base * 3;
 
-$gutter: $size-md;
+$gutter: $size-sm;
 
 // Fonts
 
