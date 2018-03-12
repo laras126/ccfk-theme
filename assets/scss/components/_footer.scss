@@ -1,23 +1,11 @@
-
-@media( $tablet-start ) {
-
-	.site__footer .inner {
-		display: flex;
-		flex-wrap: wrap;
-	}
-
-	.footer__first {
-
-	}
-
-	.footer__last {
-
-	}
+.site__footer {
+	padding-top: $gutter;
 }
 
 .footer__copy {
 	display: flex;
 	margin-top: $size-sm;
 	background: $color-grey;
-	font-size: $size-sm;
+	text-align: center;
+	padding: $size-xs;
 }
