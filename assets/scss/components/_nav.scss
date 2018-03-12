@@ -70,8 +70,8 @@ $desktop-nav: 'min-width: #{map-get($screens, 'tablet')}';
 }
 
 .nav__list__item {
-	padding-left: $size-sm;
-	padding-right: $size-sm;
+	padding-left: 1vw;
+	padding-right: 1vw;
 
 	@media( $mobile-nav ) {
 		&.current-menu-item {
