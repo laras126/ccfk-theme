@@ -15,11 +15,7 @@
 
 .page__tagline {
 	font-size: $size-sm-md;
-	margin-top: 0;
-
-	@media( $tablet-start ) {
-		font-size: $size-md;
-	}
+	// margin-top: 0;
 }
 
 .page__header-content {
@@ -41,13 +37,10 @@
 	display: block;
 	object-fit: cover;
 	width: 100%;
-
-	max-height: 400px;
-	min-height: 30vh;
+	height: 100%;
 
 	.no-objectfit & {
-		min-height: auto;
-		max-height: none;
+		height: auto;
 	}
 
 	@media( $tablet-start ) {
@@ -57,14 +50,13 @@
 }
 
 .page__main {
-	// background-color: $color-grey-vlight;
-
 	@media( $tablet-start ) {
 		padding-top: $gutter*2;
 	}
 }
 
 .page__content {
-	background-color: $color-white;
+	@media( $tablet-start ) {
+		padding-top: 0;
+	}
 }
-
