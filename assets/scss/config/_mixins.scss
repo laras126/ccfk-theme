@@ -66,3 +66,13 @@
 	margin-bottom: 0;
 	margin-top: 0;
 }
+
+@mixin a11y {
+	clip: rect( 1px 1px 1px 1px );
+	clip: rect( 1px,1px,1px,1px );
+	height: 1px;
+	overflow: hidden;
+	position: absolute !important;
+	width: 1px;
+}
+
