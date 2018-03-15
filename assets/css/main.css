@@ -324,7 +324,6 @@ body:after {
           box-sizing: border-box; }
 
 .max {
-  width: 90%;
   max-width: 1200px;
   margin: auto; }
 
@@ -378,7 +377,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: Arial, sans-serif;
-  line-height: 1.15; }
+  line-height: 1.2; }
   .fonts-loaded h1, .fonts-loaded h2, .fonts-loaded h3, .fonts-loaded h4, .fonts-loaded h5, .fonts-loaded h6 {
     font-family: "Source Sans Pro", Arial, sans-serif; }
 
@@ -394,26 +393,26 @@ a:not(.btn) {
     color: #050305; }
 
 p, li, label, input, textarea {
-  font-size: 1.4rem; }
+  font-size: 20px; }
 
 h2 {
-  font-size: 2rem; }
+  font-size: 32px; }
 
 h3, h4 {
-  font-size: 1.6rem;
+  font-size: 28px;
   margin-top: 2rem; }
 
 .meta__title {
   text-transform: uppercase;
   color: #777;
-  font-size: 1.4rem;
+  font-size: 16px;
   margin-bottom: 0; }
 
 .meta__desc {
   margin-top: 0; }
 
 label {
-  font-size: 1.4rem; }
+  font-size: 20px; }
 
 label, select {
   display: block; }
@@ -509,8 +508,9 @@ button:not(.give-donation-level-btn) {
   background-color: #B51414;
   border-radius: 2px;
   color: #ffffff;
+  font-size: 20px;
   border: 2px solid #e31919;
-  padding: 0.35rem 1.4rem; }
+  padding: 0.7rem 1.4rem; }
   input[type="submit"]:not(.give-donation-level-btn):hover, input[type="submit"]:not(.give-donation-level-btn):focus,
   button:not(.give-donation-level-btn):hover,
   button:not(.give-donation-level-btn):focus {
@@ -528,7 +528,7 @@ input[type="file"] {
   /* In IE7, the height of the select element cannot be changed by height, only font-size */ }
 
 input[type="file"] {
-  font-size: 0.7rem;
+  font-size: 16px;
   background-color: #f4f7f9;
   padding: 0.7rem 1.4rem; }
 
@@ -548,7 +548,7 @@ input[type="checkbox"]:focus {
 
 .indicates-required,
 .mce_inline_error {
-  font-size: 1.4rem;
+  font-size: 16px;
   font-style: italic;
   font-weight: 400; }
 
@@ -562,7 +562,7 @@ input[type="checkbox"]:focus {
     grid-column-gap: 2rem; } }
 
 .gform_wrapper input[value="Other"] {
-  font-size: 1.4rem !important; }
+  font-size: 20px !important; }
 
 .gform_wrapper .gfield_checkbox > li {
   display: -webkit-box;
@@ -574,14 +574,22 @@ input[type="checkbox"]:focus {
 .gform_wrapper .field_sublabel_above .ginput_complex.ginput_container label, .gform_wrapper .field_sublabel_above div[class*=gfield_date_].ginput_container label, .gform_wrapper .field_sublabel_above div[class*=gfield_time_].ginput_container label, .gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label, .gform_wrapper .field_sublabel_below div[class*=gfield_date_].ginput_container label, .gform_wrapper .field_sublabel_below div[class*=gfield_time_].ginput_container label {
   letter-spacing: 0 !important; }
 
+.gform_wrapper .gsection .gfield_label, .gform_wrapper h2.gsection_title, .gform_wrapper h3.gform_title {
+  font-size: 28px !important;
+  margin-top: 20px !important; }
+
+[id*=give-form] .give-form-title {
+  margin-top: 2rem; }
+
 .btn--outline {
   text-decoration: none;
   display: inline-block;
   background-color: #ffffff;
   border-radius: 2px;
   color: #ffffff;
+  font-size: 20px;
   border: 2px solid white;
-  padding: 0.35rem 1.4rem;
+  padding: 0.7rem 1.4rem;
   border-color: #B51414;
   color: #B51414; }
   .btn--outline:hover, .btn--outline:focus {
@@ -727,21 +735,23 @@ input[type="checkbox"]:focus {
     .nav__list__item.current-menu-item {
       background: #B51414; } }
 
-.nav__link {
+a.nav__link {
   color: #ffffff;
   font-weight: 700;
   text-decoration: none;
   display: inline-block;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem; }
+  a.nav__link:active, a.nav__link:focus {
+    color: #27A9E0; }
   @media (min-width: 860px) {
-    .nav__link {
+    a.nav__link {
       color: #B51414;
       border-top: 10px solid transparent;
       -webkit-transition: 0.2s ease all;
       -o-transition: 0.2s ease all;
       transition: 0.2s ease all; }
-      .current-menu-item .nav__link, .nav__link:hover {
+      .current-menu-item a.nav__link, a.nav__link:hover {
         color: #050305;
         border-color: #B51414; } }
 
@@ -750,14 +760,11 @@ input[type="checkbox"]:focus {
   color: #ffffff; }
 
 .page__title {
-  font-size: 2.5rem;
-  margin-bottom: 0; }
-  @media (min-width: 641px) {
-    .page__title {
-      font-size: 3rem; } }
+  font-size: 42px; }
 
 .page__tagline {
-  font-size: 1.6rem; }
+  font-size: 24px;
+  margin-top: 0; }
 
 .page__header-content {
   display: -webkit-box;
@@ -789,6 +796,7 @@ input[type="checkbox"]:focus {
     height: auto; }
   @media (min-width: 860px) {
     .page__header-image {
+      min-height: 400px;
       -webkit-clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
               clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%); } }
 
@@ -799,12 +807,6 @@ input[type="checkbox"]:focus {
 @media (min-width: 860px) {
   .page__content {
     padding-top: 0; } }
-
-@media (min-width: 860px) {
-  .content h2 {
-    font-size: 2.5rem; }
-  .content h3 {
-    font-size: 2rem; } }
 
 .content img {
   max-width: 100%; }
@@ -845,8 +847,9 @@ figure {
   background-color: #444444;
   border-radius: 2px;
   color: #ffffff;
+  font-size: 20px;
   border: 2px solid #5e5e5e;
-  padding: 0.35rem 1.4rem; }
+  padding: 0.7rem 1.4rem; }
   .wp-block-button .wp-block-button__link:hover, .wp-block-button .wp-block-button__link:focus {
     background-color: #2b2b2b;
     color: #ffffff;
@@ -979,6 +982,12 @@ th {
   background: #777;
   text-align: center;
   padding: 0.7rem; }
+  .footer__copy p {
+    font-size: 16px; }
+
+@media (min-width: 860px) {
+  .page__sidebar {
+    padding-right: 1.4rem; } }
 
 .sidebar__widgets {
   list-style-type: none;
@@ -999,6 +1008,7 @@ th {
       margin-top: 0; } }
 
 .widget__title {
+  font-size: 24px;
   background: #050305;
   margin-top: 0;
   padding: 1.4rem;
