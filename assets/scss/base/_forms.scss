@@ -1,5 +1,5 @@
 label {
-	font-size: $size-sm;
+	font-size: $size-p;
 }
 
 label, select {
@@ -84,7 +84,7 @@ input[type="file"] {
 }
 
 input[type="file"] {
-	font-size: $size-xs;
+	font-size: $size-p-sm;
 	background-color: $color-vlight;
 	padding: $size-xs $size-sm;
 }
@@ -113,7 +113,7 @@ input[type="checkbox"]:focus {
 
 .indicates-required,
 .mce_inline_error {
-	font-size: $size-sm;
+	font-size: $size-p-sm;
 	font-style: italic;
 	font-weight: $font-weight-base;
 }
@@ -143,7 +143,7 @@ input[type="checkbox"]:focus {
 .gform_wrapper {
 
 	input[value="Other"] {
-		font-size: $size-sm !important;
+		font-size: $size-p !important;
 	}
 
 	.gfield_checkbox > li {

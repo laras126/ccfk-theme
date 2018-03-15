@@ -5,16 +5,12 @@
 }
 
 .page__title {
-	font-size: $size-md-lg;
+	font-size: $size-h1;
 	margin-bottom: 0;
-
-	@media( $phablet-start ) {
-		font-size: $size-lg;
-	}
 }
 
 .page__tagline {
-	font-size: $size-sm-md;
+	font-size: $size-h4;
 	// margin-top: 0;
 }
 
@@ -44,6 +40,7 @@
 	}
 
 	@media( $tablet-start ) {
+		min-height: 400px;
 		clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
 	}
 

@@ -8,4 +8,8 @@
 	background: $color-grey;
 	text-align: center;
 	padding: $size-xs;
+
+	p {
+		font-size: $size-p-sm;
+	}
 }

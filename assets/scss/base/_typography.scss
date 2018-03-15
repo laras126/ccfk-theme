@@ -1,7 +1,7 @@
 body {
 	@include fonts(body);
 	line-height: $line-height-base;
-	font-size: 115%;
+	font-size: 110%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -20,15 +20,23 @@ a:not(.btn) {
 	}
 }
 
-	&:visited:not(.nav__link) {
-		color: $color-darker;
-	}
+p, li, label, input, textarea {
+	font-size: $size-p;
+}
+
+h2 {
+	font-size: $size-h2;
+}
+
+h3, h4 {
+	font-size: $size-h3;
+	margin-top: $size-md;
 }
 
 .meta__title {
 	text-transform: uppercase;
 	color: $color-grey;
-	font-size: $size-sm;
+	font-size: $size-p-sm;
 	margin-bottom: 0;
 }
 

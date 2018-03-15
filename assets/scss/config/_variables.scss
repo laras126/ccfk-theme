@@ -104,7 +104,7 @@ $c-link-hover: 		$color-vdark;
 // Rem Unit Scale
 
 $line-height-base: 	1.5;
-$line-height-sm: 	  1.15;
+$line-height-sm: 	  1.2;
 
 // Reevaluate these
 $base:        1rem;
@@ -117,6 +117,16 @@ $size-md-lg:	$base * 2.5;
 $size-lg:			$base * 3;
 
 $gutter: $size-sm;
+
+// Type sizes
+
+$size-p-sm:  14px;
+$size-p:  20px;
+$size-h4: 24px;
+$size-h3: 28px;
+$size-h2: 32px;
+$size-h1: 42px;
+
 
 // Fonts
 

@@ -10,9 +10,10 @@
   background-color: $button-color;
   border-radius: 2px;
   color: $text-color;
+	font-size: $size-p;
 
   border: 2px solid lighten($button-color, 10%);
-  padding: $size-xs/2 $size-sm;
+  padding: $size-xs $size-sm;
 
 	&:hover,
 	&:focus {

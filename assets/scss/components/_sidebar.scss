@@ -1,3 +1,8 @@
+.page__sidebar {
+	@media( $tablet-start ) {
+		padding-right: $gutter;
+	}
+}
 
 .sidebar__widgets {
 	@include unstyle-list;
@@ -15,6 +20,7 @@
 }
 
 .widget__title {
+	font-size: $size-h4;
 	background: $color-vdark;
 	margin-top: 0;
 	padding: $gutter;
