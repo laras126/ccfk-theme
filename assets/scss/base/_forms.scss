@@ -159,6 +159,16 @@ input[type="checkbox"]:focus {
 	letter-spacing: 0 !important;
 }
 
+.gform_wrapper .gsection .gfield_label, .gform_wrapper h2.gsection_title, .gform_wrapper h3.gform_title {
+	font-size: $size-h3 !important;
+	margin-top: $size-p !important;
+}
+
+[id*=give-form] .give-form-title {
+	margin-top: $size-md;
+}
+
+
 //
 // Buttons
 //
