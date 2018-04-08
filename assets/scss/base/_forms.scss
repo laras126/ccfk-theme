@@ -176,12 +176,17 @@ input[type="checkbox"]:focus {
 
 @mixin btn {
 	text-decoration: none;
-	display: inline-block;
+	display: inline-flex;
+}
+
+.btn {
+	@include btn;
+	@include button($color-dark);
 }
 
 .btn--outline {
 	@include btn;
-	@include button($white);
+	@include button(transparent);
 	border-color: $color-dark;
 	color: $color-dark;
 }

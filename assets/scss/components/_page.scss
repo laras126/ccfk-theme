@@ -45,6 +45,11 @@
 
 }
 
+.page__cta {
+	display: flex;
+	flex-direction: column;
+}
+
 .page__main {
 	@media( $tablet-start ) {
 		padding-top: $gutter*2;

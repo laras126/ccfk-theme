@@ -4,8 +4,20 @@
 		{% if post.post_excerpt %}
 			<p class="page__tagline">{{post.post_excerpt}}</p>
 		{% endif %}
+		{% set cta = post.get_field('header_cta') %}
+		<div class="page__cta">
+			{% if cta %}
+				<a href="{{cta.connected_page}}"><span class="btn">{{cta.button_text}}</span></a>
+			{% else %}
+				<a href="#content" class="icon icon--red icon--with-text">
+					<span class="text">Read on</span>
+					{{fn('ccfk_get_svg', 'arrow-down')}}
+				</a>
+			{% endif %}
+		</div>
 	</div>
 	{% if post.thumbnail %}
-		<img class="page__header-image image" src="{{post.thumbnail.src}}" alt="">
+		<img class="page__header-image image" src="{{post.thumbnail.src}}" alt="{{post.thumbnail.alt}}">
 	{% endif %}
 </header>
+{{ function('yoast_breadcrumb', '<nav id="breadcrumbs" class="main-breadcrumbs">','</nav>', false ) }}
