@@ -4,12 +4,11 @@
 	}
 }
 
-.sidebar__widgets {
+.widgets {
 	@include unstyle-list;
 }
 
 .widget {
-	background-image: linear-gradient(to bottom left, $color-white, $color-grey-vlight);
 	border-top: 5px solid $color-dark;
 	padding-top: 0;
 
@@ -18,6 +17,14 @@
 		margin-top: 0;
 	}
 
+	.menu {
+		@include unstyle-list;
+		li:before {
+			content: '\0002B';
+			padding-right: 5px;
+			color: $color-dark;
+		}
+	}
 	// If smaller widget text
 	// p, li {
 	// 	font-size: $size-p-sm;
@@ -26,10 +33,4 @@
 
 .widget__title {
 	font-size: $size-h4;
-	background: $color-vdark;
-	margin-top: 0;
-	padding: $gutter;
-	margin-left: -$gutter;
-	margin-right: -$gutter;
-	color: $color-white;
 }
