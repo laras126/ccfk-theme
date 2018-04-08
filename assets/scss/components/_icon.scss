@@ -1,0 +1,19 @@
+
+.icon--with-text {
+	border-top: 1px solid $color-grey;
+	padding-top: $size-md;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-decoration: none;
+
+	.text {
+		color: $color-grey-light;
+	}
+}
+
+svg {
+	.icon--red & {
+		fill: $color-dark;
+	}
+}

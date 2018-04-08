@@ -86,3 +86,18 @@ function ccfk_widgets_init() {
 	) );
 }
 add_action( 'widgets_init', 'ccfk_widgets_init' );
+	) );
+}
+add_action( 'widgets_init', 'ccfk_widgets_init' );
+
+/*
+ * Get file contents from an SVG
+ * @param string | name of menu item that must match name of SVG file
+ * @return string | SVG markup
+ */
+
+function ccfk_get_svg($item) {
+	$name = strtolower($item);
+	$icon = file_get_contents(get_template_directory() . '/assets/svg/' . $name .'.svg');
+	return $icon;
+}
