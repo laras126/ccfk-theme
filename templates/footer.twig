@@ -1,5 +1,8 @@
-<div class="grid layout-thirds max">
-	<div class="footer__cell">
+<div class="grid max">
+	<ul class="widgets grid layout-thirds">
+		{{footer_widgets}}
+	</ul>
+	{# <div class="footer__cell">
 		<div id="mc_embed_signup">
 		<form action="//chop.us12.list-manage.com/subscribe/post?u=3084725fe88c147383df7cccd&amp;id=79d0fc128a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="novalidate">
 				<div id="mc_embed_signup_scroll">
@@ -38,8 +41,21 @@
 	</div>
 	<div class="footer__cell">
 		Smore content
-	</div>
+	</div> #}
 </div>
 <div class="footer__copy">
-	<p class="max">&copy; Copyright {{"now"|date('Y')}}. All Rights Reserved. CCfK, Inc. is a 501(c)(3) organization.</p>
+	<div class="max">
+		<ul class="footer__social">
+			<li>
+				<a href="https://www.facebook.com/coolcarsforkidsinc/"><span class="a11y">Facebook</span>{{fn('ccfk_get_svg', 'facebook')}}</a>
+			</li>
+			<li>
+				<a href="https://twitter.com/CoolCarsForKids"><span class="a11y">Twitter</span>{{fn('ccfk_get_svg', 'twitter')}}</a>
+			</li>
+			<li><a href="https://www.instagram.com/coolcarsforkidsinc/">
+				<span class="a11y">Instagram</span>{{fn('ccfk_get_svg', 'instagram')}}</a>
+			</li>
+		</ul>
+		<p>&copy; Copyright {{"now"|date('Y')}}. All Rights Reserved. CCfK, Inc. is a 501(c)(3) organization.</p>
+	</div>
 </div>

@@ -1,15 +1,44 @@
 .site__footer {
 	padding-top: $gutter;
+
+	a {
+		color: $color-med;
+
+		&:hover,
+		&:active {
+			color: $color-light;
+		}
+
+	}
 }
 
 .footer__copy {
 	display: flex;
 	margin-top: $size-sm;
-	background: $color-grey;
+	background: $color-dark;
 	text-align: center;
 	padding: $size-xs;
+	align-items: center;
 
 	p {
 		font-size: $size-p-sm;
+	}
+}
+
+.footer__social {
+	@include unstyle-list;
+	padding-top: $size-xs;
+	display: flex;
+	justify-content: center;
+	li {
+		padding-left: $size-xs;
+		padding-right: $size-xs;
+	}
+
+	svg {
+		fill: $color-white;
+		&:hover {
+			fill: $color-light;
+		}
 	}
 }
