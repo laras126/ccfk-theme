@@ -41,8 +41,11 @@ class StarterSite extends TimberSite {
 	function add_to_context( $context ) {
 		$context['menu'] = new TimberMenu('Main Menu');
 		$context['footer_links'] = new TimberMenu('Footer Links');
-		$context['sidebar'] = Timber::get_widgets('main_sidebar');
+		$context['footer_widgets'] = Timber::get_widgets('footer_widgets');
 		$context['site'] = $this;
+		if ( function_exists( 'yoast_breadcrumb' ) ) {
+			$context['breadcrumbs'] = yoast_breadcrumb('<nav id="breadcrumbs" class="main-breadcrumbs">','</nav>', false );
+		}
 		return $context;
 	}
 
@@ -76,16 +79,13 @@ add_action( 'wp_enqueue_scripts', 'ccfk_scripts' );
 
 function ccfk_widgets_init() {
 	register_sidebar( array(
-			'name'          => __( 'Main Sidebar', 'textdomain' ),
-			'id'            => 'main_sidebar',
+			'name'          => __( 'Footer Widgets', 'textdomain' ),
+			'id'            => 'footer_widgets',
 			'description'   => __( 'Widgets in this area will be shown on all posts and pages.', 'textdomain' ),
 			'before_widget' => '<li id="%1$s" class="widget pad %2$s">',
 			'after_widget'  => '</li>',
 			'before_title'  => '<h3 class="widget__title">',
 			'after_title'   => '</h3>',
-	) );
-}
-add_action( 'widgets_init', 'ccfk_widgets_init' );
 	) );
 }
 add_action( 'widgets_init', 'ccfk_widgets_init' );

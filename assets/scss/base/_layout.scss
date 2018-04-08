@@ -25,6 +25,14 @@
 	}
 }
 
+.layout-single {
+	grid-template-columns: minmax(min-content, 800px);
+	justify-content: center;
+	.no-cssgrid & {
+		.content { max-width: 800px; }
+	}
+}
+
 // Sidebar layout
 
 .layout-sidebar {
