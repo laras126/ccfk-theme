@@ -56,7 +56,7 @@ body {
 // ----
 
 $dark-blue: 		#1b75bc;
-$light-blue: 		#27A9E0;
+$light-blue: 		desaturate(lighten(#27A9E0, 10%), 20%);
 $vlight-blue:   #E0E6F2;
 
 $grey: 				  #777;
