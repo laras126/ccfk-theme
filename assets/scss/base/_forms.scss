@@ -179,7 +179,8 @@ input[type="checkbox"]:focus {
 	display: inline-flex;
 }
 
-.btn {
+.btn,
+.btn-outer > a.nav__link {
 	@include btn;
 	@include button($color-dark);
 }

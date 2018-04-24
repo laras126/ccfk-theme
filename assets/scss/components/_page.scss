@@ -48,6 +48,10 @@
 .page__cta {
 	display: flex;
 	flex-direction: column;
+
+	a:hover {
+		text-decoration: none;
+	}
 }
 
 .page__main {

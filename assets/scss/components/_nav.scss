@@ -87,9 +87,10 @@ a.nav__link {
 	&:focus {
 		color: $color-med;
 	}
+
 	@media( $desktop-nav ) {
 		color: $color-dark;
-		border-top: 10px solid transparent;
+		border-bottom: 10px solid transparent;
 		@include transition(all);
 
 		.current-menu-item &,
@@ -97,7 +98,6 @@ a.nav__link {
 			color: $color-vdark;
 			border-color: $color-dark;
 		}
-
 	}
 
 	font-weight: $font-weight-strong;
