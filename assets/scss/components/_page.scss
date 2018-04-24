@@ -51,8 +51,8 @@
 }
 
 .page__cta {
-	display: flex;
-	flex-direction: column;
+	border-top: 1px solid $color-grey;
+	padding-top: $size-sm;
 
 	a:hover {
 		text-decoration: none;

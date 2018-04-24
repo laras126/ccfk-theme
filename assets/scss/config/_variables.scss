@@ -16,8 +16,8 @@ $phablet-start: 'min-width: #{map-get($screens, 'mobile')}';
 $tablet-start: 'min-width: #{map-get($screens, 'tablet')}';
 $desktop-start: 'min-width: #{map-get($screens, 'desktop')}';
 
-$desktop-nav: $tablet-start;
 $mobile-nav: 'max-width: #{map-get($screens, 'tablet') - 1}';
+$desktop-nav: $tablet-start;
 
 body {
   &:after {

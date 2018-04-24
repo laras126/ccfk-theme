@@ -4,7 +4,12 @@ body {
 	font-size: 110%;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	@include fonts(heading);
 	line-height: $line-height-sm;
 }
@@ -13,9 +18,10 @@ a,
 a:link,
 a:not(.btn) {
 	color: $color-dark;
-
-	&:hover {
-		color: $color-vdark;
+	@media( $desktop-nav ) {
+		&:hover {
+			color: $color-vdark;
+		}
 	}
 }
 
