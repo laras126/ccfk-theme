@@ -39,8 +39,7 @@ class StarterSite extends TimberSite {
 	}
 
 	function add_to_context( $context ) {
-		$context['menu'] = new TimberMenu('Main Menu');
-		$context['footer_links'] = new TimberMenu('Footer Links');
+		$context['menu'] = new TimberMenu('primary');
 		$context['footer_widgets'] = Timber::get_widgets('footer_widgets');
 		$context['site'] = $this;
 		if ( function_exists( 'yoast_breadcrumb' ) ) {
@@ -76,6 +75,11 @@ function ccfk_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'ccfk_scripts' );
 
+
+function ccfk_register_nav_menus() {
+	register_nav_menu( 'primary', __( 'Primary Menu', 'ccfk' ) );
+}
+add_action( 'after_setup_theme', 'ccfk_register_nav_menus' );
 
 function ccfk_widgets_init() {
 	register_sidebar( array(
