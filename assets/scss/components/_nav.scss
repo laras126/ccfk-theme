@@ -93,8 +93,8 @@ a.nav__link {
 		border-bottom: 10px solid transparent;
 		@include transition(all);
 
-		.current-menu-item &,
-		&:hover {
+		li:not(.btn-outer).current-menu-item &,
+		 &:hover {
 			color: $color-vdark;
 			border-color: $color-dark;
 		}

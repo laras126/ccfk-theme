@@ -2,11 +2,11 @@
 	padding-top: $gutter;
 
 	a {
-		color: $color-vlight;
+		color: $color-light;
 
 		&:hover,
 		&:active {
-			color: $color-light;
+			color: $color-vlight;
 		}
 
 	}
