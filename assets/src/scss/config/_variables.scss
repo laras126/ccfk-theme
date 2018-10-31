@@ -1,0 +1,142 @@
+// ----
+// ---- Screen Sizes
+// ----
+
+// Breakpoints
+
+$screens: (
+  'mobile':  641px,
+  'tablet':  860px,
+  'desktop': 1200px
+);
+
+$mobile-only: 'max-width: #{map-get($screens, 'mobile') - 1}';
+$phablet-start: 'min-width: #{map-get($screens, 'mobile')}';
+$tablet-start: 'min-width: #{map-get($screens, 'tablet')}';
+$desktop-start: 'min-width: #{map-get($screens, 'desktop')}';
+
+$mobile-nav: 'max-width: #{map-get($screens, 'tablet') - 1}';
+$desktop-nav: $tablet-start;
+
+body {
+	&::after {
+		position: fixed;
+		z-index: 9;
+		bottom: 0;
+		right: 0;
+		color: white;
+		padding: 20px;
+		font-weight: 700;
+		text-align: center;
+	}
+}
+
+
+// ----
+// ---- Colors
+// ----
+
+$dark-blue: #1b75bc;
+$light-blue: desaturate(lighten(#27A9E0, 10%), 20%);
+$vlight-blue: #E0E6F2;
+
+$grey: #777;
+$dark-grey:#272727;
+
+$white: #ffffff;
+$white-alt:#f4f7f9;
+
+$maroon: #59405C;
+$l-teal: desaturate(#BDF2E3, 10%);
+$seagreen: #21A99C;
+$green: #1BBF54;
+$yellow: #FCF7D8;
+$l-yellow: lighten($yellow, 5%);
+$orange: #FC625D;
+
+$dark-red: #B51414;
+$gold: #D7C296;
+$black: #050305;
+
+
+// Semantic variable names
+
+$color-vlight:       $white-alt;
+$color-light:        $gold;
+$color-med:          $light-blue;
+$color-dark:         $dark-red;
+$color-darker:       darken($color-dark, 10%);
+$color-vdark:        $black;
+
+$color-white:        $white;
+$color-grey-dark:    darken($grey, 20%);
+$color-grey:         $grey;
+$color-grey-light:   lighten($grey, 20%);
+$color-grey-vlight:#EEEEEE;;
+
+$c-link-color:       darken($color-med, 10%);
+$c-link-hover:       $color-vdark;
+
+
+// ----
+// ---- Typography
+// ----
+
+// Rem Unit Scale
+
+$line-height-base: 1.5;
+$line-height-sm: 1.2;
+
+// Reevaluate these
+$base:        1rem;
+
+$size-xs:       $base * 0.7;
+$size-sm:       $base * 1.4;
+$size-sm-md:    $base * 1.6;
+$size-md:       $base * 2;
+$size-md-lg:    $base * 2.5;
+$size-lg:       $base * 3;
+
+$gutter: $size-sm;
+
+// Type sizes
+
+$size-p-sm: 1rem;
+$size-p:    1.25rem;
+$size-h4:   1.5rem;
+$size-h3:   1.75rem;
+$size-h2:   2rem;
+$size-h1:   2.625rem;
+
+
+// Fonts
+
+$sans-serif: 'Source Sans Pro', Arial, sans-serif;
+$serif: 'Crimson Text', Georgia, serif;
+
+$font-initial-heading: Arial, sans-serif;
+$font-initial-body:    Arial, serif;
+
+$font-family-heading: $sans-serif;
+$font-family-body: $sans-serif;
+
+$font-weight-base:     400;
+$font-weight-strong:   700;
+$font-weight-heading:  600;
+
+
+// ----
+// ---- Utilities
+// ----
+
+$border-reg: 1px solid rgba($color-med, 0.4);
+$border-thick: 5px solid $color-light;
+
+// Z-Index Scale
+$z-bot: -1;
+$z-base: 0;
+$z-back: 1;
+$z-mid: 2;
+$z-top: 3;
+$z-tiptop: 4;
+

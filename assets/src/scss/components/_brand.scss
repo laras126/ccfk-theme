@@ -1,0 +1,26 @@
+
+.header__brand {
+	display: flex;
+	align-items: center;
+}
+
+.brand__logo {
+	width: 100px;
+	min-height: 50px;
+	padding-right: $size-xs;
+}
+
+.brand__text {
+	font-size: $size-p;
+	flex-shrink: 0;
+
+	@media( $mobile-only ) {
+		@include a11y;
+	}
+
+	> a {
+		color: $color-vdark;
+		font-weight: $font-weight-strong;
+		text-decoration: none;
+	}
+}

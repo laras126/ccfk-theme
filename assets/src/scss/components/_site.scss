@@ -1,0 +1,17 @@
+.site__header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: $color-white;
+	padding: $size-xs;
+	flex-wrap: wrap;
+
+	@media( $desktop-nav ) {
+		padding-bottom: 0;
+	}
+}
+
+.site__footer {
+	background-color: $color-vdark;
+	color: $color-white;
+}
