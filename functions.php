@@ -66,11 +66,11 @@ new StarterSite();
 
 
 function ccfk_scripts() {
-	wp_enqueue_style( 'ccfk-style', get_template_directory_uri() . '/assets/css/main.css' );
-	wp_enqueue_script( 'ccfk-scripts', get_template_directory_uri() . '/assets/js/build/scripts.js' );
+	wp_enqueue_style( 'ccfk-style', get_template_directory_uri() . '/assets/build/css/main.css' );
+	wp_enqueue_script( 'ccfk-scripts', get_template_directory_uri() . '/assets/build/js/main.js' );
 
 	if ( is_page_template( 'page-template-longform.php' )) {
-		wp_enqueue_script( 'ccfk-longform-scripts', get_template_directory_uri() . '/assets/js/build/longform.js' );
+		wp_enqueue_script( 'ccfk-longform-scripts', get_template_directory_uri() . '/assets/build/js/longform.js' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'ccfk_scripts' );
@@ -102,6 +102,6 @@ add_action( 'widgets_init', 'ccfk_widgets_init' );
 
 function ccfk_get_svg($item) {
 	$name = strtolower($item);
-	$icon = file_get_contents(get_template_directory() . '/assets/svg/' . $name .'.svg');
+	$icon = file_get_contents(get_template_directory() . '/assets/build/images/' . $name .'.svg');
 	return $icon;
 }
