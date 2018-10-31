@@ -1,0 +1,16 @@
+{
+  "name": "ccfk-assets",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "NODE_ENV=dev pmc-build-utils dev",
+    "prod": "NODE_ENV=prod pmc-build-utils prod",
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "pmc-build-utils": "file:../../../../../pmc/pmc-build-utils"
+  }
+}
