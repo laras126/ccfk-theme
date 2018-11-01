@@ -10,13 +10,14 @@
 
 		<header class="site__header">
 			<div class="header__brand">
-				<img class="brand__logo" src="{{site.theme.link}}/assets/svg/logo.svg" alt="Logo: Red and black race car">
+				<img class="brand__logo" src="{{site.theme.link}}/assets/build/images/logo.svg" alt="Logo: Red and black race car">
 				<span class="brand__text" role="banner">
 					<a href="{{site.url}}" rel="home">{{site.name}}</a>
 				</span>
 			</div>
-			<nav class="header__nav" role="navigation">
-				{% include "menu.twig" with {'menu': menu.get_items} %}
+			<nav class="header__nav" role="navigation" data-site-nav>
+				<button class="nav__toggle" data-site-nav-toggle>Menu</button>
+				{{ function('wp_nav_menu', {'theme_location': 'primary'}) }}
 			</nav>
 		</header>
 

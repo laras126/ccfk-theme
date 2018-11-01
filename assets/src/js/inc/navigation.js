@@ -7,7 +7,7 @@
 ( function() {
 	var container, button, menu, links, i, len;
 
-	container = document.getElementById( 'site-navigation' );
+	container = document.querySelector( '[data-site-nav]' );
 	if ( ! container ) {
 		return;
 	}
@@ -82,12 +82,12 @@
 
 		if ( 'ontouchstart' in window ) {
 			touchStartFn = function( e ) {
-				var menuItem = this.parentNode, i;
+				var menuItem = this.parentNode, i; // eslint-disable-line
 
 				if ( ! menuItem.classList.contains( 'focus' ) ) {
 					e.preventDefault();
 					for ( i = 0; i < menuItem.parentNode.children.length; ++i ) {
-						if ( menuItem === menuItem.parentNode.children[i] ) {
+						if ( menuItem === menuItem.parentNode.children[i] ) { // eslint-disable-line
 							continue;
 						}
 						menuItem.parentNode.children[i].classList.remove( 'focus' );
@@ -103,4 +103,4 @@
 			}
 		}
 	}( container ) );
-} )();
+}() );
