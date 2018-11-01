@@ -1,10 +1,10 @@
-import './inc/flickity.js';
-import './inc/plugins.js';
-import './inc/navigation.js';
+import siteNavigation from './inc/navigation.js';
 
 ( function() {
 
 	document.addEventListener( 'DOMContentLoaded', function() {
+
+		siteNavigation();
 
 		// Toggle Menu
 		// @link http://www.a11ymatters.com/pattern/mobile-nav/#use-a-semantic-element-for-the-toggle-button
@@ -19,7 +19,6 @@ import './inc/navigation.js';
 			toggleMenu();
 		});
 
-	
 		function toggleMenu() {
 			isMenuOpen = ( ! isMenuOpen ) ? true : false;
 
@@ -39,11 +38,6 @@ import './inc/navigation.js';
 				toggleMenu();
 				$toggle.focus();
 			}
-		});
-
-		fluidvids.init({
-			selector: [ 'iframe', 'object' ], // runs querySelectorAll()
-			players: [ 'www.youtube.com', 'player.vimeo.com' ] // players to support
 		});
 
 	});
