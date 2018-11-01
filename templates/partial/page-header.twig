@@ -23,7 +23,7 @@
 	</div>
 
 	{% if post.thumbnail and post.show_header_image %}
-		<img class="page__header-image image" src="{{post.thumbnail.src}}" alt="{{post.thumbnail.alt}}">
+		<img class="page__header-image image" src="{{post.thumbnail.src|resize(400)}}" srcset="{{ function('wp_get_attachment_image_srcset', post.thumbnail.id) }}" alt="{{post.thumbnail.alt}}">
 	{% endif %}
 
 </header>
