@@ -1773,7 +1773,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;var __WEBPACK_LO
  */
 (function () {
   var container, button, menu, links, i, len;
-  container = document.getElementById('site-navigation');
+  container = document.querySelector('[data-site-nav]');
 
   if (!container) {
     return;
@@ -1851,13 +1851,14 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;var __WEBPACK_LO
     if ('ontouchstart' in window) {
       touchStartFn = function touchStartFn(e) {
         var menuItem = this.parentNode,
-            i;
+            i; // eslint-disable-line
 
         if (!menuItem.classList.contains('focus')) {
           e.preventDefault();
 
           for (i = 0; i < menuItem.parentNode.children.length; ++i) {
             if (menuItem === menuItem.parentNode.children[i]) {
+              // eslint-disable-line
               continue;
             }
 
@@ -1887,6 +1888,8 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;var __WEBPACK_LO
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+/* eslint-disable */
 
 /*! fluidvids.js v2.4.1 | (c) 2014 @toddmotto | https://github.com/toddmotto/fluidvids */
 !function (e, t) {
@@ -1962,29 +1965,29 @@ __webpack_require__.r(__webpack_exports__);
   document.addEventListener('DOMContentLoaded', function () {
     // Toggle Menu
     // @link http://www.a11ymatters.com/pattern/mobile-nav/#use-a-semantic-element-for-the-toggle-button
-    var $toggle = document.querySelector('*[rel=js-menu-toggle]'),
-        $menu = document.querySelector('*[rel=js-menu]'),
-        $dropdowns = document.querySelectorAll('*[rel=js-dropdown]');
-    $toggle.addEventListener('click', function toggleMenu() {
-      $menu.classList.toggle('is-open');
-      $toggle.classList.toggle('is-open');
+    var $toggle = document.querySelector('[data-site-nav-toggle]'),
+        $menu = document.querySelector('[data-site-nav] .menu'),
+        $dropdowns = document.querySelectorAll('[data-site-nav] .menu-item-has-children');
+    var isMenuOpen = false;
+    $toggle.addEventListener('click', function () {
+      toggleMenu();
     });
 
-    var _loop = function _loop(i) {
-      var element = $dropdowns[i];
-      element.addEventListener('click', function toggleDropdown(e) {
-        e.preventDefault();
-        element.classList.toggle('is-open');
-      });
-    };
+    function toggleMenu() {
+      isMenuOpen = !isMenuOpen ? true : false;
+      $menu.classList.toggle('is-open');
+      $toggle.classList.toggle('is-open');
 
-    for (var i = 0; i < $dropdowns.length; i++) {
-      _loop(i);
+      if (isMenuOpen) {
+        $toggle.innerHTML = 'Close';
+      } else {
+        $toggle.innerHTML = 'Menu';
+      }
     } // ESC key closes the menu
 
 
     document.addEventListener('keyup', function (e) {
-      if (e.keyCode === 27 && $menu.classList.contains('is-open')) {
+      if (27 === e.keyCode && $menu.classList.contains('is-open')) {
         toggleMenu();
         $toggle.focus();
       }
