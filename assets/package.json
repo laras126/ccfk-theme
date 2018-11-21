@@ -1,16 +1,17 @@
 {
-  "name": "ccfk-assets",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "NODE_ENV=dev pmc-build-utils dev",
-    "prod": "NODE_ENV=prod pmc-build-utils prod"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "pmc-build-utils": "file:../../../../../pmc/pmc-build-utils"
-  }
+	"name": "ccfk-assets",
+	"version": "1.0.0",
+	"description": "The assets directory for Cool Cars for Kids' WordPress theme.",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "NODE_ENV=dev pmc-build-utils dev",
+		"prod": "NODE_ENV=prod pmc-build-utils prod",
+		"kss": "NODE_ENV=dev pmc-build-utils kss"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"pmc-build-utils": "git+ssh://git@bitbucket.org/penskemediacorp/pmc-build-utils.git#v0.1.0"
+	},
+	"dependencies": {}
 }
