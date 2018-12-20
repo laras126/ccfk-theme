@@ -1,11 +1,22 @@
 {% extends "base.twig" %}
 
 {% block content %}
+<section class="page__article">
 
-	{% for post in posts %}
-		{% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
-	{% endfor %}
+	<header class="page__header">
+		<div class="page__header-content content pad">
+			<h1 class="page__title">Blog</h1>
+		</div>
+	</header>
+			
+	<div class="max pad">
+		{{post.title}}
+		{% for post in posts %}
+			{% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
+		{% endfor %}
 
-	{% include 'partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %}
-
+		{% include 'partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %}
+		</div>
+	</div>
+</section>
 {% endblock %}
