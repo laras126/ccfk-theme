@@ -1,4 +1,4 @@
-<header class="page__header{{post.show_header_image ? ' grid layout-image' }}">
+<header class="page__header{{post.show_header_image and post.thumbnail ? ' grid layout-image' }}">
 	<div class="page__header-content content pad">
 		<h1 class="page__title">{{post.title}}</h1>
 
@@ -6,7 +6,7 @@
 			<p class="page__tagline">{{post.post_excerpt}}</p>
 		{% endif %}
 
-		{% if post.show_header_image %}
+		{% if post.show_header_image and post.thumbnail %}
 			<div class="page__cta">
 				{% set cta = post.get_field('header_cta') %}
 				{% if cta.button_text != '' %}
