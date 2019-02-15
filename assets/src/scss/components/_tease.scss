@@ -3,3 +3,18 @@
 	margin-bottom: $size-sm;
 	border-bottom: $border-reg;
 }
+
+.tease-title {
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+.tease-title a:hover {
+	color: $color-vdark;
+}
+
+.tease-date {
+	font-size: $size-p-sm;
+	color: $color-grey;
+	margin-top: 0;
+}

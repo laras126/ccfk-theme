@@ -2,8 +2,10 @@
 	<div class="page__header-content content pad">
 		<h1 class="page__title">{{post.title}}</h1>
 
-		{% if post.post_excerpt %}
+		{% if post.post_excerpt and post.post_type == 'page' %}
 			<p class="page__tagline">{{post.post_excerpt}}</p>
+		{% elseif post.post_type == 'post' %}
+			<p class="page__tagline">{{post.date}}</p>
 		{% endif %}
 
 		{% if post.show_header_image and post.thumbnail %}

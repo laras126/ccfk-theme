@@ -1,3 +1,5 @@
+// stylelint-disable
+
 .longform-rows {
 	grid-template-rows: .5fr minmax(.5fr, 400px) min-content;
 	grid-row-gap: $gutter;

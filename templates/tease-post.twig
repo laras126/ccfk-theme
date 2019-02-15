@@ -3,8 +3,9 @@
 {% block content %}
 <div class="grid layout-sidebar">
 	<div class="content">
-		<h2 class="h2"><a href="{{post.link}}">{{post.title}}</a></h2>
-		<p>{{post.preview.length(25)}}</p>
+		<h2 class="tease-title"><a href="{{post.link}}">{{post.title}}</a></h2>
+		<p class="tease-date">{{ post.date }}</p>
+		<p>{{post.preview.length(50)}}</p>
 	</div>
 	{% if post.thumbnail.src %}
 		<figure class="sidebar">
