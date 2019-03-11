@@ -7,38 +7,38 @@
 
 // Button
 @mixin button( $button-color, $text-color: $white ) {
-  background-color: $button-color;
-  border-radius: 2px;
-  color: $text-color;
+	background-color: $button-color;
+	border-radius: 2px;
+	color: $text-color;
 	font-size: $size-p;
 
-  border: 2px solid lighten($button-color, 10%);
-  padding: $size-xs $size-sm;
+	border: 2px solid lighten($button-color, 10%);
+	padding: $size-xs $size-sm;
 
 	&:hover,
 	&:focus {
 		background-color: darken( $button-color, 10% );
 		color: $text-color;
-    border-color: $button-color;
+		border-color: $button-color;
 	}
 
 	&:active {
 		background-color: darken( $button-color, 30% );
-    border-color: darken( $button-color, 10%);
+		border-color: darken( $button-color, 10%);
 	}
 }
 
 
 // Hardware acceleration
 @mixin accelerate($name) {
-  will-change: $name;
-  transform: translateZ(0);
-  backface-visibility: hidden;
-  perspective: 1000px;
+	will-change: $name;
+	transform: translateZ(0);
+	backface-visibility: hidden;
+	perspective: 1000px;
 }
 
 @mixin transition($property) {
-	transition: 0.2s ease $property;
+	transition: 200ms ease $property;
 }
 
 // Font loading

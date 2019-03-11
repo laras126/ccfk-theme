@@ -15,7 +15,7 @@
 .footer__copy {
 	display: flex;
 	margin-top: $size-sm;
-	background: $color-dark;
+	background-color: $color-dark;
 	text-align: center;
 	padding: $size-xs;
 	align-items: center;
@@ -30,6 +30,7 @@
 	padding-top: $size-xs;
 	display: flex;
 	justify-content: center;
+
 	li {
 		padding-left: $size-xs;
 		padding-right: $size-xs;
@@ -37,6 +38,7 @@
 
 	svg {
 		fill: $color-white;
+
 		&:hover {
 			fill: $color-light;
 		}

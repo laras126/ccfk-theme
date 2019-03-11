@@ -53,6 +53,7 @@
 
 	@media( $tablet-start ) {
 		min-height: 400px;
+		max-height: 60vh;
 		clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
 	}
 
